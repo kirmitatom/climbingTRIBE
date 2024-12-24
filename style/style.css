@@ -323,3 +323,71 @@ nav {
   }
 }
 /*hero-section css end*/
+/*fuetures section css start*/
+.features-section {
+  text-align: center;
+  padding: 50px 20px;
+  background-color: var(--secondary-color);
+  border-top: 5px solid var(--text-dark);
+}
+.features-section h2 {
+  font-size: 4rem;
+  font-weight: 500;
+  font-family: var(--header-font);
+  margin-bottom: 30px;
+  color: var(--text-dark);
+}
+.features-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+.feature-item {
+  background-color: #f0f0f0;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  width: 300px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.feature-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+.feature-item img {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 15px;
+}
+.feature-item h3 {
+  font-family: var(--body-font);
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: var(--text-dark);
+}
+.feature-item p {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 20px;
+}
+.feature-item a {
+  display: inline-block;
+  text-decoration: none;
+  color: var(--white);
+  background-color: var(--text-dark);
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+.feature-item a:hover {
+  background-color: var(--secondary-color);
+  color: var(--text-dark);
+}
+.feature-item3 a {
+  margin-top: 23px;
+}
+/*feutures section css end*/
+/* community section css start*/

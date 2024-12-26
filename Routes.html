@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/style.css">
+    <title>Climbing Routes</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            text-align: center;
+        }
+        #map {
+            width: 100%;
+            height: 80vh;
+        }
+        .info-panel {
+            padding: 10px;
+            background-color: #f9f9f9;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin: 20px;
+            border-radius: 5px;
+        }
+        .info-panel input, .info-panel button {
+            display: block;
+            width: 100%;
+            margin: 10px 0;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+    </style>
+    <!-- Leaflet.js CSS and JS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <!-- PapaParse for CSV parsing -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.2/papaparse.min.js"></script>
+</head>
+<body>
+    <nav class="nav">
+        <div class="nav__header">
+          <div class="nav__logo">
+            <a href="home.html">climbing<span>Tribe</span>.</a>
+          </div>
+          <div class="nav__menu__btn" id="menu-btn">
+            <span><i class="ri-menu-line"></i></span>
+          </div>
+        </div>
+        <ul class="nav__links" id="nav-links">
+          <li><a href="home.html">Home</a></li>
+          <li><a href="community.html">Community</a></li>
+          <li><a href="Events.html">Events</a></li>
+          <li><a href="Routes.html">Routes</a></li>
+          <li><a href="#Marketplace">Marketplace</a></li>
+        </ul>
+        <div class="nav__btns">
+          <button class="btn sign__up">Sign Up</button>
+          <button class="btn sign__in">Sign In</button>
+        </div>
+      </nav>
+    <header>
+        <h1>Climbing Routes</h1>
+    </header>
+    <div class="info-panel">
+        <h2>Add Climbing Spot</h2>
+        <form id="addSpotForm">
+            <input type="text" id="name" placeholder="Climbing Spot Name" required />
+            <input type="number" id="latitude" placeholder="Latitude" step="any" required />
+            <input type="number" id="longitude" placeholder="Longitude" step="any" required />
+            <button type="submit">Add Spot</button>
+        </form>
+        <hr>
+        <h2>Upload Climbing Spots (CSV)</h2>
+        <input type="file" id="csvFile" accept=".csv" />
+    </div>
+    <div id="map"></div>
+    <script>
+        const climbingSpots = [
+            { name: "Eldorado Canyon", location: [39.9311, -105.2838] },
+            { name: "Garden of the Gods", location: [38.8783, -104.8691] },
+            { name: "Boulder Canyon", location: [40.0053, -105.3917] },
+        ]; // Store all climbing spots here
+
+        // Initialize Leaflet map
+        const map = L.map('map').setView([39.7392, -104.9903], 8); // Default view: Denver, CO
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            maxZoom: 19,
+        }).addTo(map);
+
+        // Add marker for each climbing spot
+        function addClimbingSpot(name, lat, lng) {
+            climbingSpots.push({ name, location: [lat, lng] });
+            L.marker([lat, lng]).addTo(map)
+                .bindPopup(`<h3>${name}</h3><p>Climbing spot added!</p>`);
+        }
+
+        // Manual spot addition via form
+        document.getElementById('addSpotForm').addEventListener('submit', (e) => {
+            e.preventDefault();
+            const name = document.getElementById('name').value;
+            const lat = parseFloat(document.getElementById('latitude').value);
+            const lng = parseFloat(document.getElementById('longitude').value);
+
+            addClimbingSpot(name, lat, lng);
+            e.target.reset(); // Clear the form
+        });
+        // Handle CSV file upload
+        document.getElementById('csvFile').addEventListener('change', (e) => {
+            const file = e.target.files[0];
+            if (file) {
+                Papa.parse(file, {
+                    header: true,
+                    skipEmptyLines: true,
+                    complete: (results) => {
+                        results.data.forEach(row => {
+                            const { name, latitude, longitude } = row;
+                            if (name && latitude && longitude) {
+                                addClimbingSpot(
+                                    name,
+                                    parseFloat(latitude),
+                                    parseFloat(longitude)
+                                );
+                            }
+                        });
+                        alert('CSV data successfully added to the map!');
+                    },
+                    error: (error) => {
+                        console.error('Error parsing CSV:', error);
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+</html>

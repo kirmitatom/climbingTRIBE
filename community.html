@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/style.css">
+    <title>SummitCircle Community Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+
+        /* Header Section */
+        .header {
+            background: linear-gradient(135deg, #2a7d2e, #4caf50);
+            color: white;
+            text-align: center;
+            padding: 40px 20px;
+        }
+        .header h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+        }
+        .header p {
+            font-size: 1.2rem;
+        }
+
+        /* Main Content */
+        .main-content {
+            display: grid;
+            grid-template-columns: 1fr 300px;
+            gap: 20px;
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 0 20px;
+        }
+        .main-content .feed,
+        .main-content .groups,
+        .main-content .stories {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+        }
+
+        .feed h2, .groups h2, .stories h2 {
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+            color: #2a7d2e;
+        }
+
+        .post, .group, .story {
+            margin-bottom: 15px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #ddd;
+        }
+        .post:last-child, .group:last-child, .story:last-child {
+            border-bottom: none;
+        }
+
+        .post img, .story img {
+            width: 100%;
+            border-radius: 10px;
+            margin-top: 10px;
+        }
+        .group {
+            display: flex;
+            align-items: center;
+        }
+        .group img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-right: 15px;
+        }
+        .group button {
+            margin-left: auto;
+            padding: 5px 10px;
+            background: #2a7d2e;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .group button:hover {
+            background: #256a29;
+        }
+
+        /* Sidebar */
+        .sidebar {
+            display: none;
+        }
+
+        /* CTA Button */
+        .cta {
+            text-align: center;
+            margin: 40px 0;
+        }
+        .cta a {
+            text-decoration: none;
+            color: #2a7d2e;
+            background-color: #ffffff;
+            padding: 15px 30px;
+            border-radius: 30px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+        .cta a:hover {
+            background-color: #2a7d2e;
+            color: #ffffff;
+        }
+
+        /* Mobile Responsiveness */
+        @media (max-width: 768px) {
+            .main-content {
+                grid-template-columns: 1fr;
+            }
+            .sidebar {
+                display: block;
+                margin-top: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navi" style="padding-bottom: 30px;">
+        <div class="nav__header">
+          <div class="nav__logo">
+            <a href="home.html">climbing<span>Tribe</span>.</a>
+          </div>
+          <div class="nav__menu__btn" id="menu-btn">
+            <span><i class="ri-menu-line"></i></span>
+          </div>
+        </div>
+        <ul class="nav__links" id="nav-links">
+          <li><a href="home.html">Home</a></li>
+          <li><a href="community.html">Community</a></li>
+          <li><a href="Events.html">Events</a></li>
+          <li><a href="Routes.html">Routes</a></li>
+          <li><a href="#Marketplace">Marketplace</a></li>
+        </ul>
+        <div class="nav__btns">
+          <button class="btn sign__up">Sign Up</button>
+          <button class="btn sign__in">Sign In</button>
+        </div>
+      </nav>
+<section class="header">
+    <h1>Welcome to the SummitCircle Community</h1>
+    <p>Where climbers connect, share, and grow together.</p>
+</section>
+
+<!-- Main Content -->
+<div class="main-content">
+    <!-- Community Feed -->
+    <div class="feed">
+        <h2>Trending Posts</h2>
+        <div class="post">
+            <h3>Climber Jane</h3>
+            <p>"Just conquered the toughest climb of my life!"</p>
+            <img src="https://via.placeholder.com/400x200" alt="Climbing Post">
+            <div>
+                <button onclick="likePost(this)">Like</button>
+                <button onclick="commentPost()">Comment</button>
+                <button onclick="sharePost()">Share</button>
+            </div>
+        </div>
+        <div class="post">
+            <h3>Climber Mike</h3>
+            <p>"The view from the top is worth every effort."</p>
+            <img src="https://via.placeholder.com/400x200" alt="Climbing Post">
+            <div>
+                <button onclick="likePost(this)">Like</button>
+                <button onclick="commentPost()">Comment</button>
+                <button onclick="sharePost()">Share</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Sidebar or Groups Section -->
+    <div class="groups">
+        <h2>Find Your Tribe</h2>
+        <div class="group">
+            <img src="https://via.placeholder.com/50" alt="Group Thumbnail">
+            <div>Rock Climbers United</div>
+            <button>Join</button>
+        </div>
+        <div class="group">
+            <img src="https://via.placeholder.com/50" alt="Group Thumbnail">
+            <div>Boulder Masters</div>
+            <button>Join</button>
+        </div>
+    </div>
+</div>
+
+<!-- Featured Stories -->
+<section class="stories">
+    <h2>Climber Stories</h2>
+    <div class="story">
+        <h3>Meet Sarah</h3>
+        <p>"From beginner to pro, SummitCircle changed my life."</p>
+        <img src="https://via.placeholder.com/400x200" alt="Climber Story">
+    </div>
+    <div class="story">
+        <h3>John's Adventure</h3>
+        <p>"Exploring hidden routes with the community has been amazing."</p>
+        <img src="https://via.placeholder.com/400x200" alt="Climber Story">
+    </div>
+</section>
+
+<!-- Call to Action -->
+<div class="cta">
+    <a href="#">Join the Conversation</a>
+</div>
+
+<script>
+    function likePost(button) {
+        alert("You liked this post!");
+        button.style.backgroundColor = "#2a7d2e";
+        button.style.color = "#fff";
+    }
+
+    function commentPost() {
+        alert("You commented on this post!");
+    }
+
+    function sharePost() {
+        alert("You shared this post!");
+    }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,53 @@
+name,latitude,longitude
+Eldorado Canyon,39.9311,-105.2838
+Garden of the Gods,38.8783,-104.8691
+Boulder Canyon,40.0053,-105.3917
+Rocky Mountain National Park,40.3428,-105.6836
+Flatirons,39.9997,-105.2744
+Devil's Tower,44.5902,-104.7146
+Red Rocks Canyon,36.0582,-113.5225
+Joshua Tree,33.8734,-116.1587
+Zion National Park,37.2982,-113.0263
+Palo Duro Canyon,34.9377,-101.7056
+Cathedral Spires,43.7689,-106.7278
+Squamish,49.6983,-123.1561
+Denny Cove,35.1257,-85.8132
+Smith Rock,44.2923,-121.1820
+The Chief,49.6955,-123.1572
+Moab,38.5733,-109.5490
+Mount Rainier,46.8523,-121.7603
+Cedar Rock,35.7083,-79.1894
+Indian Creek,38.7393,-109.5065
+Tennessee Wall,35.0635,-85.3505
+Rim Rock,38.2115,-95.3723
+Clear Creek Canyon,39.7417,-105.2000
+Big Bend National Park,29.2422,-103.2403
+The Gunks,41.8454,-74.1280
+Bishop,37.3280,-118.4440
+Seneca Rocks,38.8095,-79.3742
+Table Mountain,33.9620,-118.4241
+Sandstone,36.9872,-82.4607
+Shawangunk Ridge,41.8521,-74.1091
+JTree,33.8734,-116.1587
+Castle Rock,38.9683,-77.5123
+Mount Hood,45.3733,-121.6950
+Mount Adams,46.2023,-121.4906
+Black Hills,44.3677,-103.6535
+Mt. Shasta,41.4090,-122.1944
+Bugaboos,50.0462,-116.7027
+Chesler Park,38.7447,-109.6170
+Half Dome,37.7450,-119.5383
+The Needles,43.7578,-102.6029
+Lake Tahoe,38.9393,-119.9786
+Pinnacles,36.5783,-121.1601
+Whitney Portal,36.5761,-118.2922
+Big Bear Lake,34.2440,-116.9114
+Mount St. Helens,46.1912,-122.1957
+Cascades,46.8530,-121.7623
+Sugarloaf,43.7956,-110.6769
+Grand Teton,43.7385,-110.7320
+The Nose,37.7199,-119.5382
+El Capitan,37.7333,-119.6376
+The Boulders,36.8600,-93.1458
+Echo Cove,37.0250,-113.4594
+Pinnacle Peak,33.6074,-111.9106

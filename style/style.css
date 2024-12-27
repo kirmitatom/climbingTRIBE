@@ -482,7 +482,7 @@ nav {
 }
 .cta-button a:hover {
   color: var(--text-dark);
-  background-color: var(--secondary-color);
+  background-color: var(--primary-color);
 }
 
 @media (max-width: 768px) {
@@ -492,3 +492,66 @@ nav {
 }
 /*community section css end*/
 /*Events section css start*/
+.events-section {
+  border-top: 5px solid var(--text-dark);
+  padding: 40px 20px;
+  background: url('https://www.transparenttextures.com/patterns/asfalt-dark.png'), linear-gradient(135deg, var(--secondary-color), var(--secondary-color));
+  text-align: center;
+}
+.events-section h2 {
+  font-family: var(--header-font);
+  font-weight: 700;
+  font-size: 4rem;
+  margin-bottom: 15px;
+  color: var(--text-dark);
+}
+.events-section p {
+  font-size: 1.1rem;
+  margin-bottom: 40px;
+  color: #555;
+}
+.events-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 20px;
+}
+.event-item {
+  flex: 1 1 200px;
+  max-width: 220px;
+  text-align: center;
+}
+.event-number {
+  width: 60px;
+  height: 60px;
+  margin: 0 auto 15px;
+  background-color: var(--primary-color);
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: bold;
+  line-height: 60px;
+  border-radius: 50%;
+}
+.event-number1 {
+  background-color: #004B73;
+}
+.event-number2 {
+  background-color: #005F8C;
+}
+.event-number3 {
+  background-color: #007BBF;
+}
+.event-number4 {
+  background-color: #1A7FBF;
+}
+.event-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+}
+.event-description {
+  font-size: 0.95rem;
+  color: #666;
+  line-height: 1.4;
+}

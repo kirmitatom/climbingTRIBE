@@ -482,7 +482,7 @@ nav {
 }
 .cta-button a:hover {
   color: var(--text-dark);
-  background-color: var(--primary-color);
+  background-color: var(--white);
 }
 
 @media (max-width: 768px) {
@@ -494,6 +494,7 @@ nav {
 /*Events section css start*/
 .events-section {
   border-top: 5px solid var(--text-dark);
+  border-bottom: 5px solid var(--text-dark);
   padding: 40px 20px;
   background: url('https://www.transparenttextures.com/patterns/asfalt-dark.png'), linear-gradient(135deg, var(--secondary-color), var(--secondary-color));
   text-align: center;
@@ -555,3 +556,91 @@ nav {
   color: #666;
   line-height: 1.4;
 }
+/*Routes section css start*/
+.routes-section {
+  border: 2px solid #ccc;
+  background: linear-gradient(to right, #f9f9f9, #e6f3fd);
+  border-radius: 12px;
+  padding: 40px;
+  width: 80%;
+  max-width: 900px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: 20px auto;
+}
+
+.routes-content {
+  max-width: 100%;
+  flex: 1 1 50%;
+  margin: 20px 0;
+}
+
+.routes-content h1 {
+  font-size: 2.8em;
+  font-weight: bold;
+  margin: 0;
+  color: #333;
+  line-height: 1.2;
+}
+
+.routes-content h1 span {
+  color: #007bff;
+}
+
+.routes-content p {
+  font-size: 1.2em;
+  color: #444;
+  margin: 20px 0;
+  line-height: 1.8;
+}
+
+.routes-btn {
+  background-color: var(--secondary-color);
+  color: var(--text-dark);
+  padding: 15px 35px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.2em;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.routes-btn:hover {
+  background-color: var(--primary-color);
+  transform: translateY(-3px); 
+}
+
+.routes-visual {
+  width: 100%;
+  flex: 1 1 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.routes-visual img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; 
+}
+
+@media screen and (max-width: 768px) {
+  .routes-section {
+    flex-direction: column;
+    padding: 20px;
+  }
+  .routes-content {
+    text-align: center;
+  }
+  .routes-visual {
+    margin: 20px 0;
+  }
+}
+/*end routes section css*/
+/*marketplace section css start*/

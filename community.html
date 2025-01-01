@@ -3,132 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
     <link rel="stylesheet" href="style/style.css">
     <title>SummitCircle Community Page</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f9f9f9;
-            color: #333;
-        }
-
-        /* Header Section */
-        .header {
-            background: linear-gradient(135deg, #2a7d2e, #4caf50);
-            color: white;
-            text-align: center;
-            padding: 40px 20px;
-        }
-        .header h1 {
-            font-size: 3rem;
-            margin-bottom: 10px;
-        }
-        .header p {
-            font-size: 1.2rem;
-        }
-
-        /* Main Content */
-        .main-content {
-            display: grid;
-            grid-template-columns: 1fr 300px;
-            gap: 20px;
-            max-width: 1200px;
-            margin: 20px auto;
-            padding: 0 20px;
-        }
-        .main-content .feed,
-        .main-content .groups,
-        .main-content .stories {
-            background: white;
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            padding: 20px;
-        }
-
-        .feed h2, .groups h2, .stories h2 {
-            font-size: 1.8rem;
-            margin-bottom: 15px;
-            color: #2a7d2e;
-        }
-
-        .post, .group, .story {
-            margin-bottom: 15px;
-            padding-bottom: 15px;
-            border-bottom: 1px solid #ddd;
-        }
-        .post:last-child, .group:last-child, .story:last-child {
-            border-bottom: none;
-        }
-
-        .post img, .story img {
-            width: 100%;
-            border-radius: 10px;
-            margin-top: 10px;
-        }
-        .group {
-            display: flex;
-            align-items: center;
-        }
-        .group img {
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            margin-right: 15px;
-        }
-        .group button {
-            margin-left: auto;
-            padding: 5px 10px;
-            background: #2a7d2e;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-        .group button:hover {
-            background: #256a29;
-        }
-
-        /* Sidebar */
-        .sidebar {
-            display: none;
-        }
-
-        /* CTA Button */
-        .cta {
-            text-align: center;
-            margin: 40px 0;
-        }
-        .cta a {
-            text-decoration: none;
-            color: #2a7d2e;
-            background-color: #ffffff;
-            padding: 15px 30px;
-            border-radius: 30px;
-            font-size: 1.2rem;
-            font-weight: bold;
-            transition: background-color 0.3s ease, color 0.3s ease;
-        }
-        .cta a:hover {
-            background-color: #2a7d2e;
-            color: #ffffff;
-        }
-
-        /* Mobile Responsiveness */
-        @media (max-width: 768px) {
-            .main-content {
-                grid-template-columns: 1fr;
-            }
-            .sidebar {
-                display: block;
-                margin-top: 20px;
-            }
-        }
-    </style>
 </head>
 <body>
-
     <nav class="navi" style="padding-bottom: 30px;">
         <div class="nav__header">
           <div class="nav__logo">
@@ -149,74 +28,90 @@
           <button class="btn sign__up">Sign Up</button>
           <button class="btn sign__in">Sign In</button>
         </div>
-      </nav>
-<section class="header">
-    <h1>Welcome to the SummitCircle Community</h1>
-    <p>Where climbers connect, share, and grow together.</p>
-</section>
-
-<!-- Main Content -->
-<div class="main-content">
-    <!-- Community Feed -->
-    <div class="feed">
-        <h2>Trending Posts</h2>
-        <div class="post">
-            <h3>Climber Jane</h3>
-            <p>"Just conquered the toughest climb of my life!"</p>
-            <img src="https://via.placeholder.com/400x200" alt="Climbing Post">
+    </nav>
+<div class="container">
+    <div class="sidebar">
+        <div class="profile">
+            <img src="https://via.placeholder.com/50" alt="Profile Image">
             <div>
-                <button onclick="likePost(this)">Like</button>
-                <button onclick="commentPost()">Comment</button>
-                <button onclick="sharePost()">Share</button>
+                <div class="name">Asad</div>
+                <div class="username">@asad</div>
             </div>
         </div>
-        <div class="post">
-            <h3>Climber Mike</h3>
-            <p>"The view from the top is worth every effort."</p>
-            <img src="https://via.placeholder.com/400x200" alt="Climbing Post">
-            <div>
-                <button onclick="likePost(this)">Like</button>
-                <button onclick="commentPost()">Comment</button>
-                <button onclick="sharePost()">Share</button>
+        <h3>My Tribes</h3>
+        <ul class="menu">
+            <li><a href="#"><img src="https://via.placeholder.com/40" alt=""> osvnvn</a></li>
+            <li><a href="#"><img src="https://via.placeholder.com/40" alt=""> Prwgg</a></li>
+            <li><a href="#"><img src="https://via.placeholder.com/40" alt=""> Frggrwrg</a></li>
+            <li><a href="#"><img src="https://via.placeholder.com/40" alt=""> eqhte</a></li>
+            <li><a href="#"><img src="https://via.placeholder.com/40" alt=""> Noterg5r55</a></li>
+        </ul>
+        <a href="#" class="create-post">Discover new tribes</a>
+    </div>
+    <div class="main-content">
+        <div class="stories">
+            <div class="story">
+                <img src="https://via.placeholder.com/80x100" alt="">
+                <div class="name">John</div>
             </div>
+            <div class="story">
+                <img src="https://via.placeholder.com/80x100" alt="">
+                <div class="name">Jane</div>
+            </div>
+            <div class="story">
+                <img src="https://via.placeholder.com/80x100" alt="">
+                <div class="name">Jane</div>
+            </div>
+            <div class="story">
+                <img src="https://via.placeholder.com/80x100" alt="">
+                <div class="name">Jane</div>
+            </div>
+            <div class="story">
+                <img src="https://via.placeholder.com/80x100" alt="">
+                <div class="name">Jane</div>
+            </div>
+            <div class="story">
+                <img src="https://via.placeholder.com/80x100" alt="">
+                <div class="name">Jane</div>
+            </div>
+        </div>
+        <div class="post-box">
+            <img src="https://via.placeholder.com/40" alt="pfp">
+            <button><i class="fas fa-mountain"></i> Peakpost</button>
+            <button><i class="fas fa-book"></i> Story</button>
+            <button><i class="fas fa-users"></i> Create a Tribe</button>
+        </div>
+        <div class="post">
+            <div class="post-header">
+                <img src="https://via.placeholder.com/40" alt="">
+                <div>
+                    <div class="name">John</div>
+                    <div class="time">2 hours ago</div>
+                </div>
+            </div>
+            <img src="https://via.placeholder.com/500x300" alt="" class="post-image">
         </div>
     </div>
-
-    <!-- Sidebar or Groups Section -->
-    <div class="groups">
-        <h2>Find Your Tribe</h2>
-        <div class="group">
-            <img src="https://via.placeholder.com/50" alt="Group Thumbnail">
-            <div>Rock Climbers United</div>
-            <button>Join</button>
+    <div class="messages">
+        <div class="search">
+            <input type="text" placeholder="Search...">
         </div>
-        <div class="group">
-            <img src="https://via.placeholder.com/50" alt="Group Thumbnail">
-            <div>Boulder Masters</div>
-            <button>Join</button>
+        <div class="tabs">
+            <div class="tab active">Chats</div>
+            <div class="tab">Requests</div>
+        </div>
+        <div class="message-list">
+            <div class="message">
+                <img src="https://via.placeholder.com/40" alt="">
+                <div>
+                    <div class="name">Jane</div>
+                    <div class="text">Hey, how are you?</div>
+                </div>
+            </div>
         </div>
     </div>
 </div>
 
-<!-- Featured Stories -->
-<section class="stories">
-    <h2>Climber Stories</h2>
-    <div class="story">
-        <h3>Meet Sarah</h3>
-        <p>"From beginner to pro, SummitCircle changed my life."</p>
-        <img src="https://via.placeholder.com/400x200" alt="Climber Story">
-    </div>
-    <div class="story">
-        <h3>John's Adventure</h3>
-        <p>"Exploring hidden routes with the community has been amazing."</p>
-        <img src="https://via.placeholder.com/400x200" alt="Climber Story">
-    </div>
-</section>
-
-<!-- Call to Action -->
-<div class="cta">
-    <a href="#">Join the Conversation</a>
-</div>
 <section class="footer">
     <div class="logo">
       <img alt="Climbing Tribe logo" height="40" src="https://storage.googleapis.com/a1aa/image/I8EOfOz8kRzVK6ovNBPVVY3VNY8CdMfFWOrOJvWD035hRLAUA.jpg" width="40"/>
@@ -242,29 +137,7 @@
         </div>
         <button class="signupbtn">SIGN UP</button>
     </div>
-    <div class="social-icons">
-        <a href="#"><i class="fab fa-twitter"></i></a>
-        <a href="#"><i class="fab fa-instagram"></i></a>
-        <a href="#"><i class="fab fa-facebook-f"></i></a>
-        <a href="#"><i class="fab fa-linkedin-in"></i></a>
-    </div>
   </section>
-
-<script>
-    function likePost(button) {
-        alert("You liked this post!");
-        button.style.backgroundColor = "#2a7d2e";
-        button.style.color = "#fff";
-    }
-
-    function commentPost() {
-        alert("You commented on this post!");
-    }
-
-    function sharePost() {
-        alert("You shared this post!");
-    }
-</script>
 
 </body>
 </html>

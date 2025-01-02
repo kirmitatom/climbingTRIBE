@@ -894,25 +894,12 @@ nav {
 .post-box:hover {
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
 }
-.post-box .post-input img {
+.post-box img {
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  margin-right: 10px;
 }
-.post-box .post-input {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 20px;
-  color: white;
-  padding: 15px;
-  border-radius: 25px;
-  cursor: pointer;
-}
-.post-box .post-input div:hover {
-  background-color: #0056b3;
-}
+
 .post {
   background-color: #fff;
   border-radius: 10px;
@@ -1038,10 +1025,6 @@ nav {
   flex-direction: row;
   display: flex;
 }
-.post-box img {
-  border-radius: 50%;
-  height: 50px;
-}
 .post-box button {
   background-color: #007bff;
   color: #fff;
@@ -1110,3 +1093,21 @@ nav {
       transform: translateX(-50%);
   }
 }
+/*footer signbutton style2*/ 
+.signupbtn1 {
+  background-color: #007bff !important; 
+}
+.signupbtn1:hover {
+  background-color: #B0C4DE !important;
+  color: #000000 !important;
+}
+.posts {
+  height: 90vh;
+  overflow-y: auto; 
+  padding: 20px;
+}
+.posts::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+/*community page css end*/

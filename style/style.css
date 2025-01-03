@@ -1111,3 +1111,226 @@ nav {
   height: 0;
 }
 /*community page css end*/
+.events-container {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+.events-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+}
+.events-header input {
+  width: 300px;
+  padding: 10px;
+  border: 1px solid #E0E0E0;
+  border-radius: 8px;
+}
+.events-header .profile {
+  display: flex;
+  align-items: center;
+}
+.events-header .profile img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-left: 10px;
+}
+.main {
+  display: flex;
+  margin-top: 20px;
+}
+.schedule {
+  flex: 3;
+  background-color: #FFFFFF;
+  border-radius: 12px;
+  padding: 20px;
+  margin-right: 20px;
+}
+.schedule h2 {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 600;
+}
+.schedule .date-range {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+}
+.schedule .date-range button {
+  background-color: #FFFFFF;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+}
+.schedule .date-range .view-options {
+  display: flex;
+  align-items: center;
+}
+.schedule .date-range .view-options button {
+  background-color: #FFFFFF;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  margin-left: 10px;
+}
+.schedule .date-range .view-options button.active {
+  color: #00A3FF;
+}
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+  gap: 10px;
+  margin-top: 20px;
+}
+.calendar-grid .header {
+  font-weight: 600;
+  text-align: center;
+}
+.calendar-grid .time-slot {
+  text-align: center;
+  font-weight: 600;
+}
+.calendar-grid .day {
+  background-color: #FFFFFF;
+  border-radius: 8px;
+  padding: 10px;
+  font-size: 14px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.calendar-grid .event {
+  background-color: #E0F7FA;
+  border-radius: 8px;
+  padding: 10px;
+  font-size: 14px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.calendar-grid .event.urgent {
+  background-color: #FFEBEE;
+}
+.calendar-grid .event i {
+  margin-top: 5px;
+}
+
+.register-event {
+  flex: 1;
+  background-color: #FFFFFF;
+  border-radius: 12px;
+  padding: 20px;
+}
+.register-event h2 {
+  margin: 0;
+  font-size: 28px;
+  font-weight: 600;
+}
+.register-event .form-group {
+  margin-top: 20px;
+}
+.register-event .form-group label {
+  display: block;
+  font-size: 16px;
+  color: #A0A0A0;
+  margin-bottom: 10px;
+}
+.register-event .form-group p {
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 15px;
+}
+.register-event .form-group .attachments {
+  display: flex;
+  margin-top: 15px;
+}
+.register-event .form-group .attachments img {
+  width: 80px;
+  height: 80px;
+  border-radius: 8px;
+  margin-right: 15px;
+}
+.register-event .form-group .location {
+  margin-top: 25px;
+}
+.register-event .form-group .location p {
+  font-size: 16px;
+  color: #333;
+}
+#eventPhotos img{
+  height: 275px;
+  width: 350px;
+  border-radius: 20px;
+}
+.buttons {
+  display: flex;
+  justify-content: center;
+}
+.registerButton {
+  padding: 20px;
+  background-color: var(--primary-color);
+  color: var(--white);
+  font-size: 20px;
+  border: none;
+  border-radius: 20px;
+  margin-top: 20px;
+}
+.registerButton:hover {
+  background-color: var(--secondary-color);
+  color: var(--text-dark);
+  transition: background-color 0.3s ease;
+}
+@media (max-width: 768px) {
+  .main {
+    flex-direction: column;
+  }
+
+  .schedule {
+    margin-right: 0;
+  }
+
+  .calendar-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .register-event {
+    margin-top: 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .events-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .events-header input {
+    width: 100%;
+  }
+
+  .calendar-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .calendar-grid .header,
+  .calendar-grid .time-slot {
+    font-size: 12px;
+  }
+
+  .registerButton {
+    padding: 15px;
+    font-size: 18px;
+  }
+  .register-event {
+    margin-top: 30px;
+    justify-content: center;
+  }
+}
+.schedule h2, .register-event h2 {
+  font-family: var(--header-font);
+  font-size: 30px;
+}

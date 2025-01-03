@@ -248,6 +248,10 @@
         .register-event .form-group .buttons button:hover {
             background-color: #007ACC;
         }
+        #eventPhotos img{
+            height: 275px;
+            width: 275px;
+        }
     </style>
 </head>
 <body>
@@ -279,7 +283,7 @@
                     <div class="header">Sat</div>
                     <div class="header">Sun</div>
                     <div class="time-slot">10 am</div>
-                    <div class="event">Climbing Session <i class="fas fa-mountain"></i></div>
+                    <div class="event" data-event-id="1">Climbing Session <i class="fas fa-mountain"></i></div>
                     <div class="day"></div>
                     <div class="day"></div>
                     <div class="day"></div>
@@ -288,7 +292,7 @@
                     <div class="day"></div>
                     <div class="time-slot">12 pm</div>
                     <div class="day"></div>
-                    <div class="event urgent">Safety Briefing <i class="fas fa-exclamation-circle"></i></div>
+                    <div class="event urgent" data-event-id="2">Safety Briefing <i class="fas fa-exclamation-circle"></i></div>
                     <div class="day"></div>
                     <div class="day"></div>
                     <div class="day"></div>
@@ -297,9 +301,9 @@
                     <div class="time-slot">2 pm</div>
                     <div class="day"></div>
                     <div class="day"></div>
-                    <div class="event">Advanced Climbing <span class="urgent">Urgent</span></div>
+                    <div class="event" data-event-id="3">Advanced Climbing <span class="urgent">Urgent</span></div>
                     <div class="day"></div>
-                    <div class="event">Team Meeting <i class="fas fa-users"></i></div>
+                    <div class="event" data-event-id="4">Team Meeting <i class="fas fa-users"></i></div>
                     <div class="day"></div>
                     <div class="day"></div>
                     <div class="time-slot">4 pm</div>
@@ -308,7 +312,7 @@
                     <div class="day"></div>
                     <div class="day"></div>
                     <div class="day"></div>
-                    <div class="event urgent">Gear Check <i class="fas fa-exclamation-circle"></i></div>
+                    <div class="event urgent" data-event-id="5">Gear Check <i class="fas fa-exclamation-circle"></i></div>
                     <div class="day"></div>
                     <div class="time-slot">6 pm</div>
                     <div class="day"></div>
@@ -317,29 +321,16 @@
                     <div class="day"></div>
                     <div class="day"></div>
                     <div class="day"></div>
-                    <div class="event">Reschedule Climb <i class="fas fa-clock"></i></div>
+                    <div class="event" data-event-id="6">Reschedule Climb <i class="fas fa-clock"></i></div>
                 </div>
             </div>
-            <div class="register-event">
+            <div class="register-event" id="registerEventSection">
                 <h2>Register to the Event</h2>
-                <div class="form-group">
-                    <label>Event Description</label>
-                    <p>This event is about an exciting climbing session where participants will learn advanced climbing techniques and safety measures. It is a must-attend for all climbing enthusiasts.</p>
-                </div>
-                <div class="form-group location">
-                    <label>Location</label>
-                    <p>Rocky Mountain, Colorado, USA</p>
-                </div>
-                <div class="form-group">
-                    <label>Photos</label>
-                    <div class="attachments">
-                        <img src="https://storage.googleapis.com/a1aa/image/WEuZaHxYwDZKPpscpLfzfCBIWPa8yQo8yf6ogNuyQdx8atCoA.jpg" alt="Climbing event photo 1" width="80" height="80"/>
-                        <img src="https://storage.googleapis.com/a1aa/image/3K7jLqSV1jL2K9vaXTqIPDmYY6jclrS4cVrfMlKK2eDgtWBUA.jpg" alt="Climbing event photo 2" width="80" height="80"/>
-                        <img src="https://storage.googleapis.com/a1aa/image/QNRUtEcfyKVbVye0qIUwYH2957sgZY1TyXGJk7aFwkIdtWBUA.jpg" alt="Climbing event photo 3" width="80" height="80"/>
-                    </div>
-                </div>
+                <div id="eventDescription" class="form-group"></div>
+                <div id="eventLocation" class="form-group location"></div>
+                <div id="eventPhotos" class="form-group"></div>
                 <div class="form-group buttons">
-                    <button>Register to Event</button>
+                    <button id="registerButton">Register to Event</button>
                 </div>
             </div>
         </div>
@@ -350,23 +341,18 @@
               description: "Climbing Session: Basic climbing techniques and fun.",
               location: "Climbing Gym, Downtown",
               photos: [
-                  "https://storage.googleapis.com/a1aa/image/WEuZaHxYwDZKPpscpLfzfCBIWPa8yQo8yf6ogNuyQdx8atCoA.jpg",
-                  "https://storage.googleapis.com/a1aa/image/3K7jLqSV1jL2K9vaXTqIPDmYY6jclrS4cVrfMlKK2eDgtWBUA.jpg"
+                "https://storage.googleapis.com/a1aa/image/WEuZaHxYwDZKPpscpLfzfCBIWPa8yQo8yf6ogNuyQdx8atCoA.jpg"
               ]
           },
           2: {
               description: "Safety Briefing: Learn climbing safety protocols.",
               location: "Mountain Base Camp",
-              photos: [
-                  "https://storage.googleapis.com/a1aa/image/WEuZaHxYwDZKPpscpLfzfCBIWPa8yQo8yf6ogNuyQdx8atCoA.jpg"
-              ]
+              photos: []
           },
           3: {
               description: "Advanced Climbing: For experienced climbers.",
               location: "Rocky Mountain, Colorado",
-              photos: [
-                  "https://storage.googleapis.com/a1aa/image/QNRUtEcfyKVbVye0qIUwYH2957sgZY1TyXGJk7aFwkIdtWBUA.jpg"
-              ]
+              photos: []
           },
           4: {
               description: "Team Meeting: Discuss upcoming climbs and events.",
@@ -376,9 +362,7 @@
           5: {
               description: "Gear Check: Ensure your climbing gear is in top condition.",
               location: "Outdoor Gear Store",
-              photos: [
-                  "https://storage.googleapis.com/a1aa/image/3K7jLqSV1jL2K9vaXTqIPDmYY6jclrS4cVrfMlKK2eDgtWBUA.jpg"
-              ]
+              photos: []
           },
           6: {
               description: "Reschedule Climb: Plan for next climb session.",
@@ -400,21 +384,30 @@
               eventDescription.innerHTML = `<label>Event Description</label><p>${eventData.description}</p>`;
               eventLocation.innerHTML = `<label>Location</label><p>${eventData.location}</p>`;
 
-              // Populate event photos
-              eventPhotos.innerHTML = eventData.photos.map(photo => `<img src="${photo}" alt="Event photo" width="80" height="80"/>`).join("");
-              
-              registerButton.style.display = "block";
+              // Display photos if any
+              eventPhotos.innerHTML = "<label>Photos</label>";
+              eventData.photos.forEach(photo => {
+                  const img = document.createElement("img");
+                  img.src = photo;
+                  img.alt = "Event Photo";
+                  eventPhotos.appendChild(img);
+              });
+
+              // Show register event section
+              registerEventSection.style.display = "block";
           }
       }
-      // Add event listeners to all events in the calendar grid
-      const eventElements = document.querySelectorAll('.calendar-grid .event');
-      eventElements.forEach(eventElement => {
-          eventElement.addEventListener('click', () => {
-              const eventId = eventElement.getAttribute('data-event-id');
+
+      document.querySelectorAll(".calendar-grid .event").forEach(event => {
+          event.addEventListener("click", function() {
+              const eventId = event.dataset.eventId;
               showEventDetails(eventId);
-              registerEventSection.style.display = 'block'; // Show the right-side event registration section
           });
       });
-  </script>
+
+      registerButton.addEventListener('click', function() {
+          alert("You have registered for the event!");
+      });
+    </script>
 </body>
 </html>

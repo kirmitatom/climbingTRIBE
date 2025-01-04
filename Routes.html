@@ -3,48 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style/style.css">
-    <title>Climbing Routes</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-        }
-        header {
-            background-color: #333;
-            color: #fff;
-            padding: 10px 20px;
-            text-align: center;
-        }
-        #map {
-            width: 100%;
-            height: 80vh;
-        }
-        .info-panel {
-            padding: 10px;
-            background-color: #f9f9f9;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            margin: 20px;
-            border-radius: 5px;
-        }
-        .info-panel input, .info-panel button {
-            display: block;
-            width: 100%;
-            margin: 10px 0;
-            padding: 10px;
-            border-radius: 5px;
-            border: 1px solid #ccc;
-        }
-    </style>
-    <!-- Leaflet.js CSS and JS -->
+    <title>Routes Page - ClimbingTribe</title>
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-    <!-- PapaParse for CSV parsing -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="style/style.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.2/papaparse.min.js"></script>
 </head>
 <body>
-    <nav class="nav" style="padding-bottom: 30px;">
+    <nav class="navi" style="padding-bottom: 30px; background-color: #B0C4DE;">
         <div class="nav__header">
           <div class="nav__logo">
             <a href="home.html">climbing<span>Tribe</span>.</a>
@@ -58,85 +25,150 @@
           <li><a href="community.html">Community</a></li>
           <li><a href="Events.html">Events</a></li>
           <li><a href="Routes.html">Routes</a></li>
-          <li><a href="Marketplace.html">Marketplace</a></li>
+          <li><a href="#Marketplace">Marketplace</a></li>
         </ul>
         <div class="nav__btns">
           <button class="btn sign__up">Sign Up</button>
           <button class="btn sign__in">Sign In</button>
         </div>
-      </nav>
-    <header>
-        <h1>Climbing Routes</h1>
-    </header>
-    <div class="info-panel">
-        <h2>Add Climbing Spot</h2>
-        <form id="addSpotForm">
-            <input type="text" id="name" placeholder="Climbing Spot Name" required />
-            <input type="number" id="latitude" placeholder="Latitude" step="any" required />
-            <input type="number" id="longitude" placeholder="Longitude" step="any" required />
-            <button type="submit">Add Spot</button>
-        </form>
-        <hr>
-        <h2>Upload Climbing Spots (CSV)</h2>
-        <input type="file" id="csvFile" accept=".csv" />
-    </div>
-    <div id="map"></div>
+    </nav>
+    <section class="route-PG-section">
+        <h2>Featured Routes</h2>
+        <div class="featured-PG-routes">
+            <div class="route-PG-card">
+                <img src="https://media.istockphoto.com/id/176053369/photo/view-of-el-capitan-as-seen-from-below.jpg?s=612x612&w=0&k=20&c=5hqa0AkZEEzBre6eEpM7_-UxpNpKEiTO8tzQuoQRPdI=" alt="Route Image">
+                <div class="details">
+                    <h3>El Capitan</h3>
+                    <p>Yosemite, USA</p>
+                    <p>Grade: 5.13</p>
+                    <button>View Details</button>
+                </div>
+            </div>
+            <div class="route-PG-card">
+                <img src="https://media.istockphoto.com/id/172369233/photo/aiguille-verte-and-the-mont-blanc-massif.jpg?s=612x612&w=0&k=20&c=VbjcIt9tYzuEhqvXIGXY-ZCBW6LX5cR27eKEj0UOpG8=" alt="Route Image">
+                <div class="details">
+                    <h3>Mont Blanc</h3>
+                    <p>Chamonix, France</p>
+                    <p>Grade: 5.10</p>
+                    <button>View Details</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="route-PG-section">
+        <div class="info-panel">
+            <h2>Add Climbing Spot</h2>
+            <form id="addSpotForm">
+                <input type="text" id="name" placeholder="Climbing Spot Name" required />
+                <input type="number" id="latitude" placeholder="Latitude" step="any" required />
+                <input type="number" id="longitude" placeholder="Longitude" step="any" required />
+                <input type="text" id="type" placeholder="Climbing Type (e.g., Sport, Trad)" required>
+                <input type="text" id="difficulty" placeholder="Difficulty (e.g., 5.10 - 5.12)" required>
+                <button type="submit">Add Spot</button>
+            </form>
+        </div>
+        <h2>Routes Map</h2>
+        <div id="map"></div>
+    </section>
+    <section class="footer" style="background-color: #B0C4DE;">
+        <div class="logo">
+          <img alt="Climbing Tribe logo" height="40" src="https://storage.googleapis.com/a1aa/image/I8EOfOz8kRzVK6ovNBPVVY3VNY8CdMfFWOrOJvWD035hRLAUA.jpg" width="40"/>
+          <div class="text">Climbing <span>Tribe</span></div>
+          <div class="copyright">
+              <p>Copyright &copy; 2025</p>
+              <p>By climbers. For climbers.</p>
+          </div>
+        </div>
+        <div class="links-and-button">
+            <div class="links">
+                <div>
+                    <a href="home.html">Home</a>
+                    <a href="Routes.html">Discover routes</a>
+                </div>
+                <div>
+                    <a href="community.html">join the community</a>
+                    <a href="Events.html">participate in Events</a>
+                </div>
+                <div>
+                    <a href="Marketplace">buy & sell Gear</a>
+                </div>
+            </div>
+            <button class="signupbtn signupbtn1">SIGN UP</button>
+        </div>
+    </section>
     <script>
         const climbingSpots = [
-            { name: "Eldorado Canyon", location: [39.9311, -105.2838] },
-            { name: "Garden of the Gods", location: [38.8783, -104.8691] },
-            { name: "Boulder Canyon", location: [40.0053, -105.3917] },
-        ]; // Store all climbing spots here
+            { name: "Eldorado Canyon", location: [39.9311, -105.2838], type: "Trad", difficulty: "5.10 - 5.12" },
+            { name: "Garden of the Gods", location: [38.8783, -104.8691], type: "Sport/Trad", difficulty: "5.7 - 5.13" },
+            { name: "Boulder Canyon", location: [40.0053, -105.3917], type: "Sport/Trad", difficulty: "5.8 - 5.14" },
+            { name: "Red Rock Canyon", location: [36.1596, -115.4386], type: "Trad", difficulty: "5.9 - 5.13" },
+            { name: "Joshua Tree National Park", location: [33.8734, -115.9010], type: "Trad", difficulty: "5.6 - 5.12" },
+            { name: "Smith Rock State Park", location: [44.3659, -121.1401], type: "Sport/Trad", difficulty: "5.8 - 5.14" },
+            { name: "Yosemite Valley", location: [37.7433, -119.5797], type: "Trad", difficulty: "5.6 - 5.13" },
+            { name: "Indian Creek", location: [37.8643, -109.6825], type: "Trad", difficulty: "5.9 - 5.13" },
+            { name: "Hueco Tanks", location: [31.9226, -106.0355], type: "Bouldering", difficulty: "V0 - V14" },
+            { name: "Squamish", location: [49.6841, -123.1558], type: "Trad", difficulty: "5.6 - 5.13" },
+            { name: "The Needles", location: [35.9740, -118.5548], type: "Trad", difficulty: "5.7 - 5.12" },
+            { name: "Acadia National Park", location: [44.3386, -68.2733], type: "Trad", difficulty: "5.5 - 5.10" },
+            { name: "Devils Tower", location: [44.5902, -104.7158], type: "Trad", difficulty: "5.6 - 5.12" },
+            { name: "Rifle Mountain Park", location: [39.6544, -107.7209], type: "Sport", difficulty: "5.10 - 5.14" },
+            { name: "City of Rocks", location: [42.0681, -113.7113], type: "Trad", difficulty: "5.7 - 5.12" },
+            { name: "Shawangunk Ridge", location: [41.7340, -74.2054], type: "Trad", difficulty: "5.6 - 5.13" },
+            { name: "New River Gorge", location: [38.0716, -81.0755], type: "Sport/Trad", difficulty: "5.8 - 5.14" },
+            { name: "Rocky Mountain National Park", location: [40.3428, -105.6836], type: "Trad", difficulty: "5.7 - 5.12" },
+            { name: "Cochise Stronghold", location: [31.8806, -109.9550], type: "Trad", difficulty: "5.8 - 5.12" },
+            { name: "Castle Rock State Park", location: [37.2304, -122.1136], type: "Sport", difficulty: "5.9 - 5.12" },
+            { name: "Mt. Lemmon", location: [32.4479, -110.7884], type: "Sport/Trad", difficulty: "5.8 - 5.13" },
+            { name: "Pinnacles National Park", location: [36.4906, -121.1825], type: "Trad", difficulty: "5.5 - 5.12" },
+            { name: "Tahquitz and Suicide Rocks", location: [33.7470, -116.6879], type: "Trad", difficulty: "5.7 - 5.11" },
+            { name: "Red River Gorge", location: [37.8370, -83.6677], type: "Sport", difficulty: "5.9 - 5.14" },
+            { name: "Zion National Park", location: [37.2982, -113.0263], type: "Trad", difficulty: "5.7 - 5.12" },
+            { name: "Big Bend National Park", location: [29.1275, -103.2425], type: "Trad", difficulty: "5.5 - 5.10" },
+            { name: "Black Canyon of the Gunnison", location: [38.5669, -107.7414], type: "Trad", difficulty: "5.8 - 5.12" },
+            { name: "Moab", location: [38.5733, -109.5498], type: "Sport/Trad", difficulty: "5.7 - 5.12" },
+            { name: "Teton Range", location: [43.7914, -110.6818], type: "Alpine/Trad", difficulty: "5.6 - 5.13" },
+            { name: "Mount Rainier National Park", location: [46.8797, -121.7269], type: "Alpine", difficulty: "5.6 - 5.10" },
+        ];
 
-        // Initialize Leaflet map
-        const map = L.map('map').setView([39.7392, -104.9903], 8); // Default view: Denver, CO
-        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-            maxZoom: 19,
-        }).addTo(map);
+        const map = L.map('map').setView([39.7392, -104.9903], 8);
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', { maxZoom: 19 }).addTo(map);
 
-        // Add marker for each climbing spot
-        function addClimbingSpot(name, lat, lng) {
-            climbingSpots.push({ name, location: [lat, lng] });
+        climbingSpots.forEach(spot => {
+            L.marker(spot.location).addTo(map)
+            .bindPopup(`
+                <h3>${spot.name}</h3>
+                <p>Type: ${spot.type}</p>
+                <p>Difficulty: ${spot.difficulty}</p>
+            `);
+        });
+
+        function addClimbingSpot(name, lat, lng, type, difficulty) {
+            climbingSpots.push({ name, location: [lat, lng], type, difficulty });
             L.marker([lat, lng]).addTo(map)
-                .bindPopup(`<h3>${name}</h3><p>Climbing spot added!</p>`);
+            .bindPopup(`
+                <h3>${name}</h3>
+                <p>Type: ${type}</p>
+                <p>Difficulty: ${difficulty}</p>
+                <p>Climbing spot added!</p>
+            `);
         }
 
-        // Manual spot addition via form
-        document.getElementById('addSpotForm').addEventListener('submit', (e) => {
-            e.preventDefault();
+        document.getElementById('addSpotForm').addEventListener('submit', function (event) {
+            event.preventDefault();
             const name = document.getElementById('name').value;
-            const lat = parseFloat(document.getElementById('latitude').value);
-            const lng = parseFloat(document.getElementById('longitude').value);
+            const latitude = parseFloat(document.getElementById('latitude').value);
+            const longitude = parseFloat(document.getElementById('longitude').value);
+            const type = document.getElementById('type').value;
+            const difficulty = document.getElementById('difficulty').value;
 
-            addClimbingSpot(name, lat, lng);
-            e.target.reset(); // Clear the form
-        });
-        // Handle CSV file upload
-        document.getElementById('csvFile').addEventListener('change', (e) => {
-            const file = e.target.files[0];
-            if (file) {
-                Papa.parse(file, {
-                    header: true,
-                    skipEmptyLines: true,
-                    complete: (results) => {
-                        results.data.forEach(row => {
-                            const { name, latitude, longitude } = row;
-                            if (name && latitude && longitude) {
-                                addClimbingSpot(
-                                    name,
-                                    parseFloat(latitude),
-                                    parseFloat(longitude)
-                                );
-                            }
-                        });
-                        alert('CSV data successfully added to the map!');
-                    },
-                    error: (error) => {
-                        console.error('Error parsing CSV:', error);
-                    }
-                });
+            if (!isNaN(latitude) && !isNaN(longitude) && type && difficulty) {
+                addClimbingSpot(name, latitude, longitude, type, difficulty);
+                document.getElementById('addSpotForm').reset();
+            } else {
+                alert('Please enter valid information for all fields.');
             }
         });
     </script>
+    <script src="main.js"></script>
 </body>
 </html>

@@ -62,6 +62,7 @@ const eventsData = {
       ]
   }
 };
+
 const registerEventSection = document.getElementById('registerEventSection');
 const eventDescription = document.getElementById('eventDescription');
 const eventLocation = document.getElementById('eventLocation');

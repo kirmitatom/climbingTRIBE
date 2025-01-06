@@ -41,7 +41,6 @@
                     <h3>El Capitan</h3>
                     <p>Yosemite, USA</p>
                     <p>Grade: 5.13</p>
-                    <button>View Details</button>
                 </div>
             </div>
             <div class="route-PG-card">
@@ -50,7 +49,6 @@
                     <h3>Mont Blanc</h3>
                     <p>Chamonix, France</p>
                     <p>Grade: 5.10</p>
-                    <button>View Details</button>
                 </div>
             </div>
         </div>
@@ -98,37 +96,62 @@
     </section>
     <script>
         const climbingSpots = [
-            { name: "Eldorado Canyon", location: [39.9311, -105.2838], type: "Trad", difficulty: "5.10 - 5.12" },
-            { name: "Garden of the Gods", location: [38.8783, -104.8691], type: "Sport/Trad", difficulty: "5.7 - 5.13" },
-            { name: "Boulder Canyon", location: [40.0053, -105.3917], type: "Sport/Trad", difficulty: "5.8 - 5.14" },
-            { name: "Red Rock Canyon", location: [36.1596, -115.4386], type: "Trad", difficulty: "5.9 - 5.13" },
-            { name: "Joshua Tree National Park", location: [33.8734, -115.9010], type: "Trad", difficulty: "5.6 - 5.12" },
-            { name: "Smith Rock State Park", location: [44.3659, -121.1401], type: "Sport/Trad", difficulty: "5.8 - 5.14" },
-            { name: "Yosemite Valley", location: [37.7433, -119.5797], type: "Trad", difficulty: "5.6 - 5.13" },
-            { name: "Indian Creek", location: [37.8643, -109.6825], type: "Trad", difficulty: "5.9 - 5.13" },
-            { name: "Hueco Tanks", location: [31.9226, -106.0355], type: "Bouldering", difficulty: "V0 - V14" },
-            { name: "Squamish", location: [49.6841, -123.1558], type: "Trad", difficulty: "5.6 - 5.13" },
-            { name: "The Needles", location: [35.9740, -118.5548], type: "Trad", difficulty: "5.7 - 5.12" },
-            { name: "Acadia National Park", location: [44.3386, -68.2733], type: "Trad", difficulty: "5.5 - 5.10" },
-            { name: "Devils Tower", location: [44.5902, -104.7158], type: "Trad", difficulty: "5.6 - 5.12" },
-            { name: "Rifle Mountain Park", location: [39.6544, -107.7209], type: "Sport", difficulty: "5.10 - 5.14" },
-            { name: "City of Rocks", location: [42.0681, -113.7113], type: "Trad", difficulty: "5.7 - 5.12" },
-            { name: "Shawangunk Ridge", location: [41.7340, -74.2054], type: "Trad", difficulty: "5.6 - 5.13" },
-            { name: "New River Gorge", location: [38.0716, -81.0755], type: "Sport/Trad", difficulty: "5.8 - 5.14" },
-            { name: "Rocky Mountain National Park", location: [40.3428, -105.6836], type: "Trad", difficulty: "5.7 - 5.12" },
-            { name: "Cochise Stronghold", location: [31.8806, -109.9550], type: "Trad", difficulty: "5.8 - 5.12" },
-            { name: "Castle Rock State Park", location: [37.2304, -122.1136], type: "Sport", difficulty: "5.9 - 5.12" },
-            { name: "Mt. Lemmon", location: [32.4479, -110.7884], type: "Sport/Trad", difficulty: "5.8 - 5.13" },
-            { name: "Pinnacles National Park", location: [36.4906, -121.1825], type: "Trad", difficulty: "5.5 - 5.12" },
-            { name: "Tahquitz and Suicide Rocks", location: [33.7470, -116.6879], type: "Trad", difficulty: "5.7 - 5.11" },
-            { name: "Red River Gorge", location: [37.8370, -83.6677], type: "Sport", difficulty: "5.9 - 5.14" },
-            { name: "Zion National Park", location: [37.2982, -113.0263], type: "Trad", difficulty: "5.7 - 5.12" },
-            { name: "Big Bend National Park", location: [29.1275, -103.2425], type: "Trad", difficulty: "5.5 - 5.10" },
-            { name: "Black Canyon of the Gunnison", location: [38.5669, -107.7414], type: "Trad", difficulty: "5.8 - 5.12" },
-            { name: "Moab", location: [38.5733, -109.5498], type: "Sport/Trad", difficulty: "5.7 - 5.12" },
-            { name: "Teton Range", location: [43.7914, -110.6818], type: "Alpine/Trad", difficulty: "5.6 - 5.13" },
-            { name: "Mount Rainier National Park", location: [46.8797, -121.7269], type: "Alpine", difficulty: "5.6 - 5.10" },
-        ];
+    // United States climbing spots
+    { name: "Eldorado Canyon", location: [39.9311, -105.2838], type: "Trad", difficulty: "5.10 - 5.12" },
+    { name: "Garden of the Gods", location: [38.8783, -104.8691], type: "Sport/Trad", difficulty: "5.7 - 5.13" },
+    { name: "Boulder Canyon", location: [40.0053, -105.3917], type: "Sport/Trad", difficulty: "5.8 - 5.14" },
+    { name: "Red Rock Canyon", location: [36.1596, -115.4386], type: "Trad", difficulty: "5.9 - 5.13" },
+    { name: "Joshua Tree National Park", location: [33.8734, -115.9010], type: "Trad", difficulty: "5.6 - 5.12" },
+    { name: "Smith Rock State Park", location: [44.3659, -121.1401], type: "Sport/Trad", difficulty: "5.8 - 5.14" },
+    { name: "Yosemite Valley", location: [37.7433, -119.5797], type: "Trad", difficulty: "5.6 - 5.13" },
+    { name: "Indian Creek", location: [37.8643, -109.6825], type: "Trad", difficulty: "5.9 - 5.13" },
+    { name: "Hueco Tanks", location: [31.9226, -106.0355], type: "Bouldering", difficulty: "V0 - V14" },
+    { name: "Squamish", location: [49.6841, -123.1558], type: "Trad", difficulty: "5.6 - 5.13" },
+    { name: "The Needles", location: [35.9740, -118.5548], type: "Trad", difficulty: "5.7 - 5.12" },
+    { name: "Acadia National Park", location: [44.3386, -68.2733], type: "Trad", difficulty: "5.5 - 5.10" },
+    { name: "Devils Tower", location: [44.5902, -104.7158], type: "Trad", difficulty: "5.6 - 5.12" },
+    { name: "Rifle Mountain Park", location: [39.6544, -107.7209], type: "Sport", difficulty: "5.10 - 5.14" },
+    { name: "City of Rocks", location: [42.0681, -113.7113], type: "Trad", difficulty: "5.7 - 5.12" },
+    { name: "Shawangunk Ridge", location: [41.7340, -74.2054], type: "Trad", difficulty: "5.6 - 5.13" },
+    { name: "New River Gorge", location: [38.0716, -81.0755], type: "Sport/Trad", difficulty: "5.8 - 5.14" },
+    { name: "Rocky Mountain National Park", location: [40.3428, -105.6836], type: "Trad", difficulty: "5.7 - 5.12" },
+    { name: "Cochise Stronghold", location: [31.8806, -109.9550], type: "Trad", difficulty: "5.8 - 5.12" },
+    { name: "Castle Rock State Park", location: [37.2304, -122.1136], type: "Sport", difficulty: "5.9 - 5.12" },
+    { name: "Mt. Lemmon", location: [32.4479, -110.7884], type: "Sport/Trad", difficulty: "5.8 - 5.13" },
+    { name: "Pinnacles National Park", location: [36.4906, -121.1825], type: "Trad", difficulty: "5.5 - 5.12" },
+    { name: "Tahquitz and Suicide Rocks", location: [33.7470, -116.6879], type: "Trad", difficulty: "5.7 - 5.11" },
+    { name: "Red River Gorge", location: [37.8370, -83.6677], type: "Sport", difficulty: "5.9 - 5.14" },
+    { name: "Zion National Park", location: [37.2982, -113.0263], type: "Trad", difficulty: "5.7 - 5.12" },
+    { name: "Big Bend National Park", location: [29.1275, -103.2425], type: "Trad", difficulty: "5.5 - 5.10" },
+    { name: "Black Canyon of the Gunnison", location: [38.5669, -107.7414], type: "Trad", difficulty: "5.8 - 5.12" },
+    { name: "Moab", location: [38.5733, -109.5498], type: "Sport/Trad", difficulty: "5.7 - 5.12" },
+    { name: "Teton Range", location: [43.7914, -110.6818], type: "Alpine/Trad", difficulty: "5.6 - 5.13" },
+    { name: "Mount Rainier National Park", location: [46.8797, -121.7269], type: "Alpine", difficulty: "5.6 - 5.10" },
+    { name: "Fontainebleau", location: [48.4024, 2.6376], type: "Bouldering", difficulty: "V0 - V16" },
+    { name: "Ceüse", location: [44.4667, 5.8875], type: "Sport", difficulty: "5.10 - 5.15" },
+    { name: "Kalymnos", location: [36.9584, 26.9959], type: "Sport", difficulty: "5.7 - 5.14" },
+    { name: "The Dolomites", location: [46.5861, 12.2808], type: "Alpine", difficulty: "5.6 - 5.12" },
+    { name: "Yangshuo", location: [24.7785, 110.4966], type: "Sport/Trad", difficulty: "5.7 - 5.14" },
+    { name: "Mount Kinabalu", location: [6.0751, 116.5585], type: "Alpine/Trad", difficulty: "5.8 - 5.12" },
+    { name: "Badami", location: [15.9144, 75.6843], type: "Sport", difficulty: "5.10 - 5.13" },
+    { name: "Krabi (Railay Beach)", location: [8.0117, 98.8391], type: "Sport", difficulty: "5.7 - 5.14" },
+    { name: "Fitz Roy", location: [-49.2712, -73.0439], type: "Alpine", difficulty: "5.9 - 5.12" },
+    { name: "Serra do Cipó", location: [-19.2953, -43.5832], type: "Sport", difficulty: "5.8 - 5.14" },
+    { name: "Suesca", location: [5.0508, -73.7971], type: "Trad/Sport", difficulty: "5.8 - 5.13" },
+    { name: "Cordillera Blanca", location: [-9.2016, -77.5621], type: "Alpine", difficulty: "5.7 - 5.12" },
+    { name: "Table Mountain", location: [-33.9628, 18.4105], type: "Trad", difficulty: "5.6 - 5.12" },
+    { name: "Spitzkoppe", location: [-21.8312, 15.1833], type: "Trad", difficulty: "5.7 - 5.12" },
+    { name: "Mount Kenya", location: [-0.1523, 37.3084], type: "Alpine/Trad", difficulty: "5.7 - 5.12" },
+    { name: "Waterval Boven", location: [-25.6398, 30.3244], type: "Sport", difficulty: "5.8 - 5.13" },
+    { name: "Blue Mountains", location: [-33.7163, 150.3119], type: "Sport/Trad", difficulty: "5.7 - 5.14" },
+    { name: "Mount Arapiles", location: [-36.6333, 141.8833], type: "Trad", difficulty: "5.6 - 5.13" },
+    { name: "Castle Hill", location: [-43.2011, 171.8089], type: "Bouldering", difficulty: "V0 - V14" },
+    { name: "Frey", location: [-41.0343, -71.5221], type: "Trad/Sport", difficulty: "5.7 - 5.13" },
+    { name: "Troll Wall", location: [62.4676, 7.7492], type: "Alpine/Trad", difficulty: "5.9 - 5.12" },
+    { name: "Patagonia", location: [-50.9452, -73.3354], type: "Alpine", difficulty: "5.10 - 5.14" },
+    { name: "Ha Long Bay", location: [20.9101, 107.1839], type: "Deep Water Solo", difficulty: "5.8 - 5.13" },
+    { name: "Wadi Rum", location: [29.5328, 35.4140], type: "Trad", difficulty: "5.6 - 5.12" },
+];
 
         const map = L.map('map').setView([39.7392, -104.9903], 8);
             L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', { maxZoom: 19 }).addTo(map);

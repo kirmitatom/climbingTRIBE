@@ -1665,3 +1665,157 @@ nav {
     max-width: calc(50% - 20px);
   }
 }
+
+.sell-forum {
+  padding: 40px 20px;
+  background-color: #f7f9fc;
+  border-radius: 8px;
+  max-width: 800px;
+  margin: 0 auto;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.sell-item-form h2 {
+  text-align: center;
+  font-size: 3rem;
+  color: var(--text-dark);
+  font-family: var(--header-font);
+  margin-bottom: 20px;
+}
+
+
+.sell-item-form .form-group {
+  margin-bottom: 20px;
+}
+
+.sell-item-form label {
+  display: block;
+  font-size: 1rem;
+  color: var(--text-dark);
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.sell-item-form input[type="text"],
+.sell-item-form input[type="number"],
+.sell-item-form input[type="file"],
+.sell-item-form textarea {
+  width: 100%;
+  padding: 10px 15px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 4px;
+  transition: border-color 0.3s ease;
+}
+
+.sell-item-form input[type="text"]:focus,
+.sell-item-form input[type="number"]:focus,
+.sell-item-form input[type="file"]:focus,
+.sell-item-form textarea:focus {
+  border-color: var(--primary-color);
+  outline: none;
+}
+
+.sell-item-form textarea {
+  resize: none;
+}
+
+.sell-item-form .publish-btn {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  font-size: 1.2rem;
+  color: #fff;
+  background-color: var(--primary-color);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  text-align: center;
+  transition: background-color 0.3s ease;
+}
+
+.sell-item-form .publish-btn:hover {
+  background-color: var(--secondary-color);
+  color: var(--text-dark);
+}
+
+@media (max-width: 600px) {
+  .sell-forum {
+      padding: 20px;
+  }
+
+  .sell-item-form h2 {
+      font-size: 1.5rem;
+  }
+
+  .sell-item-form .publish-btn {
+      font-size: 1rem;
+  }
+}
+
+.brands {
+  padding: 40px 20px;
+  text-align: center;
+  margin-top: 40px;
+}
+
+.section-title {
+  font-size: 3rem;
+  color: var(--text-dark);
+  margin-bottom: 20px;
+  font-family: var(--header-font);
+  font-weight: 600;
+}
+
+.brand-slider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.brands-container {
+  display: flex;
+  overflow-x: auto;
+  gap: 40px;
+  width: 100%;
+  scroll-behavior: smooth;
+}
+
+.brand-card {
+  flex: 0 0 20%;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: var(--white);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.brand-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+@media (max-width: 1024px) {
+  .brand-card {
+    flex: 0 0 25%;
+  }
+}
+
+@media (max-width: 768px) {
+  .brand-card {
+    flex: 0 0 40%;
+  }
+}
+
+@media (max-width: 480px) {
+  .brand-card {
+    flex: 0 0 60%;
+  }
+}
+
+.brands-container::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}

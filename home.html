@@ -14,7 +14,7 @@
     <body>
         <section class="hero section" id="home">
           <nav class="navi">
-            <div class="nav__header">
+            <div class="nav__header scrollright">
               <div class="nav__logo nav__logo1">
                 <a href="home.html">climbing<span>Tribe</span>.</a>
               </div>
@@ -23,13 +23,13 @@
               </div>
             </div>
             <ul class="nav__links nav__links1" id="nav-links">
-              <li><a href="#home">Home</a></li>
-              <li><a href="#Community">Community</a></li>
-              <li><a href="#Events">Events</a></li>
-              <li><a href="#Routes">Routes</a></li>
-              <li><a href="#Marketplace">Marketplace</a></li>
+              <li><a class="scrolllink" href="#home">Home</a></li>
+              <li><a class="scrolllink" href="#Community">Community</a></li>
+              <li><a class="scrolllink" href="#Events">Events</a></li>
+              <li><a class="scrolllink" href="#Routes">Routes</a></li>
+              <li><a class="scrolllink" href="#Marketplace">Marketplace</a></li>
             </ul>
-            <div class="nav__btns">
+            <div class="nav__btns scrollleft">
               <button class="btn sign__up1">Sign Up</button>
               <button class="btn sign__in1">Sign In</button>
             </div>
@@ -191,7 +191,7 @@
         </section>
         <script src="https://unpkg.com/scrollreveal"></script>
         <script>
-          ScrollReveal().reveal('.feature-item', {
+        ScrollReveal().reveal('.feature-item', {
           opacity: 0,
           delay: 200,
           distance: '100px',
@@ -200,7 +200,15 @@
           duration: 1000,
           viewFactor:0.3,
         });
-
+        ScrollReveal().reveal('.scrolllink', {
+          opacity: 0,
+          delay: 200,
+          distance: '100px',
+          origin: 'bottom',
+          interval: 200,
+          duration: 1000,
+          viewFactor:0.3,
+        });
         ScrollReveal().reveal('.scrollright', {
           opacity: 0,
           delay: 200,

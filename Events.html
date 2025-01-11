@@ -29,14 +29,14 @@
         </div>
     </nav>
     <div class="events-container">
-        <div class="events-header">
+        <div class="events-header scrollbottom">
             <input type="text" placeholder="Search Events"/>
             <div class="profile">
                 <img src="assets/my-kokou-no-hito-tattoo-v0-t7st6j82cxgc1.jpg" alt="pfp" width="40" height="40"/>
             </div>
         </div>
         <div class="main">
-            <div class="schedule">
+            <div class="schedule scrollright">
                 <h2>Events</h2>
                 <div class="date-range">
                     <span>Sep 21 - Sep 27, 2021</span>
@@ -97,7 +97,7 @@
                     <div class="event" data-event-id="6">lead climbing compatition</div>
                 </div>
             </div>
-            <div class="register-event" id="registerEventSection">
+            <div class="register-event scrollleft"  id="registerEventSection">
                 <h2>Register to the Event</h2>
                 <div id="eventDescription" class="form-group"></div>
                 <div id="eventLocation" class="form-group location"></div>
@@ -134,6 +134,41 @@
             <button class="signupbtn signupbtn1">SIGN UP</button>
         </div>
     </section>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script>
+        ScrollReveal().reveal('.scrollright', {
+          opacity: 0,
+          delay: 200,
+          distance: '100px',
+          origin: 'left',
+          duration: 1000,
+          viewFactor:0.3,
+        });
+        ScrollReveal().reveal('.scrollleft', {
+          opacity: 0,
+          delay: 200,
+          distance: '100px',
+          origin: 'right',
+          duration: 1000,
+          viewFactor:0.3,
+        });
+        ScrollReveal().reveal('.scrollbottom', {
+          opacity: 0,
+          delay: 200,
+          distance: '100px',
+          origin: 'top',
+          duration: 1000,
+          viewFactor:0.3,
+        });
+        ScrollReveal().reveal('.scrolltop', {
+          opacity: 0,
+          delay: 200,
+          distance: '100px',
+          origin: 'bottom',
+          duration: 1000,
+          viewFactor:0.3,
+        });
+    </script>
     <script src="js/main.js"></script>
 </body>
 </html>

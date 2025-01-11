@@ -33,8 +33,8 @@
         </div>
     </nav>
     <section class="route-PG-section">
-        <h2>Featured Routes</h2>
-        <div class="featured-PG-routes">
+        <h2 class="scrollbottom">Featured Routes</h2>
+        <div class="featured-PG-routes scrolltop">
             <div class="route-PG-card">
                 <img src="https://media.istockphoto.com/id/176053369/photo/view-of-el-capitan-as-seen-from-below.jpg?s=612x612&w=0&k=20&c=5hqa0AkZEEzBre6eEpM7_-UxpNpKEiTO8tzQuoQRPdI=" alt="Route Image">
                 <div class="details">
@@ -54,7 +54,7 @@
         </div>
     </section>
     <section class="route-PG-section">
-        <div class="info-panel">
+        <div class="info-panel scrollleft">
             <h2>Add Climbing Spot</h2>
             <form id="addSpotForm">
                 <input type="text" id="name" placeholder="Climbing Spot Name" required />
@@ -65,8 +65,8 @@
                 <button type="submit">Add Spot</button>
             </form>
         </div>
-        <h2>Routes Map</h2>
-        <div id="map"></div>
+        <h2 class="scrollright">Routes Map</h2>
+        <div id="map" class="scrollleft"></div>
     </section>
     <section class="footer" style="background-color: #B0C4DE;">
         <div class="logo">
@@ -94,6 +94,7 @@
             <button class="signupbtn signupbtn1">SIGN UP</button>
         </div>
     </section>
+    <script src="https://unpkg.com/scrollreveal"></script>
     <script>
         const climbingSpots = [
     { name: "Eldorado Canyon", location: [39.9311, -105.2838], type: "Trad", difficulty: "5.10 - 5.12" },
@@ -189,6 +190,38 @@
             } else {
                 alert('Please enter valid information for all fields.');
             }
+        });
+        ScrollReveal().reveal('.scrollright', {
+          opacity: 0,
+          delay: 200,
+          distance: '100px',
+          origin: 'left',
+          duration: 1000,
+          viewFactor:0.3,
+        });
+        ScrollReveal().reveal('.scrollleft', {
+          opacity: 0,
+          delay: 200,
+          distance: '100px',
+          origin: 'right',
+          duration: 1000,
+          viewFactor:0.3,
+        });
+        ScrollReveal().reveal('.scrollbottom', {
+          opacity: 0,
+          delay: 200,
+          distance: '100px',
+          origin: 'top',
+          duration: 1000,
+          viewFactor:0.3,
+        });
+        ScrollReveal().reveal('.scrolltop', {
+          opacity: 0,
+          delay: 200,
+          distance: '100px',
+          origin: 'bottom',
+          duration: 1000,
+          viewFactor:0.3,
         });
     </script>
     <script src="js/main.js"></script>

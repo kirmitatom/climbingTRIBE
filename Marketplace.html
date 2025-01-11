@@ -32,15 +32,15 @@
         </div>
     </nav>
     <section class="market-hero-sec" id="Marketplace">
-      <div class="marketplace-page">
-        <div class="hero-image-section">
+      <div class="marketplace-page scrollbottom">
+        <div class="hero-image-section scrollright">
           <img
             alt="A set of climbing gear including ropes, harnesses, and carabiners"
             src="assets/wmremove-transformed.jpeg"
             loading="lazy"
           />
         </div>
-        <div class="hero-content-section">
+        <div class="hero-content-section scrollleft">
           <div class="marketplace-badge">ClimbingTribe Marketplace</div>
           <div class="marketplace-title">Buy and Sell Climbing Gear with Ease</div>
           <div class="marketplace-description">
@@ -63,7 +63,7 @@
     
     <section class="market-items-display">
       <div class="market-items-section">
-        <h2>Top Climbing Gear Categories</h2>
+        <h2 class="scrollbottom">Top Climbing Gear Categories</h2>
         <div class="category-section">
           <div class="category-item">
             <img src="https://media.istockphoto.com/id/2182027963/photo/close-up-of-woman-safety-harness-rock-climbing-gear-and-rope.jpg?s=612x612&w=0&k=20&c=22XU3ewUfY_dLyaqUZmJEbXRQ0NKSDwRn-B5P10yHvk=" alt="Harnesses" />
@@ -90,7 +90,7 @@
             <p>Carabiners</p>
           </div>
         </div>
-        <h2>Best Deals for Climbers</h2>
+        <h2 class="scrollbottom">Best Deals for Climbers</h2>
         <div class="deal-section">
             <div class="deal">
                 <img alt="Climbing Harness" height="200" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTO4DGXdjA5_Ur6pAfICTszq0-LAS0TMFQGY51P4Cy0nqTJr2ZhPeg4EMHP4G2YYt5cIBs&usqp=CAU" width="200" />
@@ -371,11 +371,10 @@
         </div>
       </div>
     </section>
-    <section class="sell-forum">
+    <section class="sell-forum scrolltop">
         <div class="sell-item-form">
-            <h2>Sell Your Climbing Gear</h2>
+            <h2 class="scrolltop">Sell Your Climbing Gear</h2>
             <form id="sell-item-form">
-                <!-- Item Name -->
                 <div class="form-group">
                     <label for="item-name">Item Name:</label>
                     <input
@@ -386,8 +385,6 @@
                         required
                     />
                 </div>
-    
-                <!-- Item Price -->
                 <div class="form-group">
                     <label for="item-price">Price ($):</label>
                     <input
@@ -400,14 +397,10 @@
                         required
                     />
                 </div>
-    
-                <!-- Upload Photo -->
                 <div class="form-group">
                     <label for="item-photo">Upload Photo:</label>
                     <input type="file" id="item-photo" name="item-photo" accept="image/*" required />
                 </div>
-    
-                <!-- Description -->
                 <div class="form-group">
                     <label for="item-description">Description:</label>
                     <textarea
@@ -419,8 +412,7 @@
                     ></textarea>
                 </div>
     
-                <!-- Submit Button -->
-                <button type="submit" class="publish-btn">
+                <button type="submit" class="publish-btn scrollbottom">
                     <i class="fas fa-upload"></i> Publish Item
                 </button>
             </form>
@@ -428,7 +420,7 @@
     </section>
     
     <section class="brands">
-        <h2 class="section-title">Popular Climbing Gear Brands</h2>
+        <h2 class="section-title scrollbottom">Popular Climbing Gear Brands</h2>
         <div class="brand-slider">
           <div class="brands-container">
             <div class="brand-card">
@@ -494,6 +486,77 @@
             <a href="#"><i class="fab fa-linkedin-in"></i></a>
         </div>
       </section>
+      <script src="https://unpkg.com/scrollreveal"></script>
+    <script>
+        ScrollReveal().reveal('.scrollright', {
+          opacity: 0,
+          delay: 200,
+          distance: '100px',
+          origin: 'left',
+          duration: 1000,
+          viewFactor:0.3,
+        });
+        ScrollReveal().reveal('.scrollleft', {
+          opacity: 0,
+          delay: 200,
+          distance: '100px',
+          origin: 'right',
+          duration: 1000,
+          viewFactor:0.3,
+        });
+        ScrollReveal().reveal('.scrollbottom', {
+          opacity: 0,
+          delay: 200,
+          distance: '100px',
+          origin: 'top',
+          duration: 1000,
+          viewFactor:0.3,
+        });
+        ScrollReveal().reveal('.scrolltop', {
+          opacity: 0,
+          delay: 200,
+          distance: '100px',
+          origin: 'bottom',
+          duration: 1000,
+          viewFactor:0.3,
+        });
+        ScrollReveal().reveal('.category-item', {
+          opacity: 0,
+          delay: 200,
+          distance: '100px',
+          origin: 'left',
+          interval: 200,
+          duration: 1000,
+          viewFactor:0.3,
+        });
+        ScrollReveal().reveal('.form-group', {
+          opacity: 0,
+          delay: 200,
+          distance: '30px',
+          origin: 'right',
+          interval: 200,
+          duration: 1000,
+          viewFactor:0.3,
+        });
+        ScrollReveal().reveal('.deal', {
+          opacity: 0,
+          delay: 200,
+          distance: '100px',
+          origin: 'right',
+          interval: 100,
+          duration: 1000,
+          viewFactor:0.3,
+        });
+        ScrollReveal().reveal('.brands', {
+          opacity: 0,
+          delay: 200,
+          distance: '100px',
+          origin: 'left',
+          interval: 200,
+          duration: 1000,
+          viewFactor:0.3,
+        });
+    </script>
       <script src="js/main.js"></script>
 </body>
 </html>

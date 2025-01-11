@@ -1044,7 +1044,8 @@ nav {
   padding-bottom: 20px;
 }
 .stories-title {
-  font-size: 24px;
+  font-size: 40px;
+  font-family: var(--header-font);
   margin-bottom: 20px;
 }
 .stories {
@@ -1669,9 +1670,10 @@ nav {
 .sell-forum {
   padding: 40px 20px;
   background-color: #f7f9fc;
-  border-radius: 8px;
+  border-radius: 20px;
   max-width: 800px;
   margin: 0 auto;
+  margin-top: 40px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
@@ -1712,7 +1714,6 @@ nav {
 .sell-item-form input[type="number"]:focus,
 .sell-item-form input[type="file"]:focus,
 .sell-item-form textarea:focus {
-  border-color: var(--primary-color);
   outline: none;
 }
 
@@ -1726,17 +1727,16 @@ nav {
   padding: 12px;
   font-size: 1.2rem;
   color: #fff;
-  background-color: var(--primary-color);
+  background-color: var(--text-dark);
   border: none;
-  border-radius: 4px;
+  border-radius: 25px;
   cursor: pointer;
   text-align: center;
   transition: background-color 0.3s ease;
 }
 
 .sell-item-form .publish-btn:hover {
-  background-color: var(--secondary-color);
-  color: var(--text-dark);
+  background-color: var(--primary-color);
 }
 
 @media (max-width: 600px) {

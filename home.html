@@ -38,7 +38,7 @@
             <div class="carousel-inner">
               <div class="carousel-item active position-relative">
                 <img src="assets/jef-willemyns-mluUYXoTotY-unsplash.jpg" class="d-block w-100" alt="image">
-                <div class="carousel-caption">
+                <div class="carousel-caption scrollright">
                   <h1>BY CLIMBERS, FOR CLIMBERS.</h1>
                 </div>
               </div>
@@ -58,7 +58,7 @@
           </div>
         </section>
         <section class="features-section">
-          <h2>Why Climbing<span style="color: white;">Tribe</span>?</h2>
+          <h2 class="scrollbottom">Why Climbing<span style="color: white;">Tribe</span>?</h2>
           <div class="features-grid">
               <div class="feature-item">
                   <img src="assets/route.png" alt="Discover">
@@ -79,32 +79,32 @@
         </section>
         <section class="community" id="Community">
             <div class="community-content">
-                <h2>Join the Community</h2>
-                <p>Connect with climbers, share your adventures, and find your tribe.</p>
+                <h2 class="scrollbottom">Join the Community</h2>
+                <p class="scrollbottom">Connect with climbers, share your adventures, and find your tribe.</p>
         
                 <div class="community-highlights">
-                    <div class="highlight">
+                    <div class="highlight scrollright">
                         <h4>Trending Posts</h4>
                         <p>Discover what's buzzing in the climbing world right now.</p>
                     </div>
-                    <div class="highlight">
+                    <div class="highlight scrollleft">
                         <h4>Active Groups</h4>
                         <p>Join climbing groups that match your interests and goals.</p>
                     </div>
-                    <div class="highlight">
+                    <div class="highlight scrollbottom">
                         <h4>Climber Stories</h4>
                         <p>Be inspired by amazing stories from our vibrant community.</p>
                     </div>
                 </div>
         
-                <div class="cta-button">
+                <div class="cta-button scrolltop">
                     <a href="community.html">Explore the Community</a>
                 </div>
             </div>
         </section>
         <section class="events-section" id="Events">
-            <h2>Upcoming Climbing Events</h2>
-            <p>Stay engaged with our latest climbing events, competitions, and meetups. Find opportunities to connect and grow with the community.</p>
+            <h2 class="scrollbottom">Upcoming Climbing Events</h2>
+            <p class="scrollbottom">Stay engaged with our latest climbing events, competitions, and meetups. Find opportunities to connect and grow with the community.</p>
         
             <div class="events-list">
                 <div class="event-item">
@@ -129,28 +129,28 @@
                 </div>
             </div>
         
-            <div class="cta-button events-btn">
+            <div class="cta-button events-btn scrolltop">
                 <a href="Events.html">View All Events</a>
             </div>
         </section>
         <section class="routes-section" id="Routes">
-          <div class="routes-content">
+          <div class="routes-content scrollleft">
               <h1>Discover <span>Routes</span> to Elevate Your Climb</h1>
               <p>Explore the best climbing routes curated by experts and fellow climbers. From beginner paths to advanced ascents, we have it all.</p>
               <a href="Routes.html" class="routes-btn">Explore Now</a>
           </div>
-          <div class="routes-visual">
+          <div class="routes-visual scrollright">
               <img src="assets/mountain-route.png" alt="Climbing Icon">
           </div>
         </section>
         <section class="marketplace-section" id="Marketplace">
-            <div class="marketplace-content">
+            <div class="marketplace-content scrollright">
               <h2>Discover the Marketplace</h2>
               <p>Explore a curated selection of climbing gear and equipment. Connect with fellow climbers and find exactly what you need for your next adventure.</p>
               <a href="Marketplace.html">Visit Marketplace</a>
             </div>
     
-            <div class="marketplace-images">
+            <div class="marketplace-images scrollleft">
               <img src="assets/chaewul-kim-isb96g4zBlk-unsplash.jpg" alt="Climbing gear example 1">
               <img src="assets/chaewul-kim-K8ku-fxIsuY-unsplash.jpg" alt="Climbing gear example 2">
               <img src="assets/cindy-chen--7nnXc4jBWU-unsplash.jpg" alt="Climbing gear example 3">
@@ -189,9 +189,66 @@
               <a href="#"><i class="fab fa-linkedin-in"></i></a>
           </div>
         </section>
+        <script src="https://unpkg.com/scrollreveal"></script>
+        <script>
+          ScrollReveal().reveal('.feature-item', {
+          opacity: 0,
+          delay: 200,
+          distance: '100px',
+          origin: 'bottom',
+          interval: 200,
+          duration: 1000,
+          viewFactor:0.3,
+        });
+
+        ScrollReveal().reveal('.scrollright', {
+          opacity: 0,
+          delay: 200,
+          distance: '100px',
+          origin: 'left',
+          interval: 200,
+          duration: 1000,
+          viewFactor:0.3,
+        });
+        ScrollReveal().reveal('.scrollleft', {
+          opacity: 0,
+          delay: 200,
+          distance: '100px',
+          origin: 'right',
+          interval: 200,
+          duration: 1000,
+          viewFactor:0.3,
+        });
+        ScrollReveal().reveal('.scrollbottom', {
+          opacity: 0,
+          delay: 200,
+          distance: '100px',
+          origin: 'top',
+          interval: 200,
+          duration: 1000,
+          viewFactor:0.3,
+        });
+        ScrollReveal().reveal('.scrolltop', {
+          opacity: 0,
+          delay: 200,
+          distance: '100px',
+          origin: 'bottom',
+          interval: 200,
+          duration: 1000,
+          viewFactor:0.3,
+        });
+        ScrollReveal().reveal('.event-item', {
+          opacity: 0,
+          delay: 200,
+          distance: '100px',
+          origin: 'bottom',
+          interval: 200,
+          duration: 1000,
+          viewFactor:0.3,
+        });
+
+        </script>
         <script src="js/main.js"></script>
-        <script src="js/scroll.js"></script>
-        <script src="js/scrollreveal.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     </body>
 </html>

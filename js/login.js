@@ -1,5 +1,5 @@
 const db = [
-    {"useremail": "ali@gmail.com", "password": "ali"},
+    {"useremail": "test@gmail.com", "password": "test"},
     {"useremail": "hussein@gmail.com", "password": "sui"}
 ];
 
@@ -25,11 +25,11 @@ function change() {
     const text = document.getElementById("text");
 
     if (checkCredentials(email, pass)) {
-        window.location.href = "file:///C:/Users/Alish/OneDrive/Desktop/bweb/home.html";
+        window.location.href = "home.html";
         return false;
     } else {
         text.style.color = "red";
-        text.innerHTML = "Incorrect password";
+        text.innerHTML = "Incorrect password or email";
         return false;
     }
 }
@@ -53,3 +53,34 @@ function save() {
         return false;
     }
 }
+
+
+function checkLoginStatus() {
+    const isLoggedIn = localStorage.getItem("loggedIn");
+
+    const signUpBtn = document.getElementById("signUpBtn");
+    const loginBtn = document.getElementById("loginBtn");
+
+    if (isLoggedIn === "true") {
+        // Hide Sign Up button and change Login button text to Logout
+        signUpBtn.style.display = "none";
+        loginBtn.innerText = "Logout";
+        loginBtn.addEventListener("click", logout); // Attach logout event when logged in
+    } else {
+        // Show Sign Up button and change Login button text back to Login
+        signUpBtn.style.display = "inline-block";
+        loginBtn.innerText = "Login";
+        loginBtn.addEventListener("click", function() {
+            window.location.href = "login.html"; // Redirect to login page when clicked
+        });
+    }
+}
+
+function logout() {
+    localStorage.removeItem("loggedIn"); 
+    window.location.href = "login.html"; // Redirect to login page
+}
+
+document.addEventListener("DOMContentLoaded", function() {
+    checkLoginStatus(); // Check the login status when the page loads
+});

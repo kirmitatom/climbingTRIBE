@@ -232,6 +232,7 @@ nav {
 /*hero-section css */
 .carousel {
   padding-top: 20px;
+  width: 100%;
 }
 .carousel-caption {
   position: absolute;

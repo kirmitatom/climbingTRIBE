@@ -24,7 +24,7 @@ body::-webkit-scrollbar {
 }
 
 body {
-  padding: 0;
+  overflow-x: hidden;
   font-family: var(--body-font);
   background-color: var(--secondary-color);
 }
@@ -67,6 +67,7 @@ nav {
 
 .nav__menu__btn {
   font-size: 1.5rem;
+  margin-left: 200px;
   color: var(--white);
   cursor: pointer;
 }

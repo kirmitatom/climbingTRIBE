@@ -108,7 +108,7 @@ nav {
   margin-right: 50px;
 }
 
-@media (max-width: 480px) {
+@media (width > 768px) {
   nav {
     position: static;
     padding-block: 2rem 0;

@@ -26,7 +26,6 @@ html {
 
 footer, section, header {
   max-width: 100vw;
-  overflow-x: hidden;
 }
 body::-webkit-scrollbar {
   width: 0;

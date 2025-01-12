@@ -113,7 +113,7 @@ nav {
     position: static;
     padding-block: 2rem 0;
     padding-inline: 1rem;
-    max-width: 100vmax;
+    max-width: 100%;
     margin-inline: auto;
     display: flex;
     align-items: center;
@@ -229,6 +229,56 @@ nav {
     color: var(--text-dark);
   }
   /*nav style only for hero section*/
+}
+@media (max-width: 480px) {
+  nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    background-color: var(--background-color);
+    gap: 1rem;
+  }
+
+  .nav__logo {
+    text-align: center;
+  }
+
+  .nav__menu__btn {
+    display: block;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: var(--text-dark);
+  }
+
+  .nav__links {
+    display: none; /* Hide menu by default */
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--background-color);
+    width: 100%;
+  }
+
+  .nav__links a {
+    padding: 0.5rem;
+    text-align: center;
+    color: var(--text-dark);
+    text-decoration: none;
+    width: 100%;
+  }
+
+  .nav__btns {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .nav__links.active {
+    display: flex; /* Show menu when active */
+  }
 }
 /*navigation bar css end*/
 /*hero-section css */

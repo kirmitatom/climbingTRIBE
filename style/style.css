@@ -24,8 +24,6 @@ body::-webkit-scrollbar {
 }
 
 body {
-  overflow: hidden;
-  width: 100vw;
   padding: 0;
   font-family: var(--body-font);
   background-color: var(--secondary-color);

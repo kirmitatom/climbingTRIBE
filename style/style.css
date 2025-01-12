@@ -113,7 +113,7 @@ nav {
     position: static;
     padding-block: 2rem 0;
     padding-inline: 1rem;
-    max-width: var(--max-width);
+    max-width: 100vmax;
     margin-inline: auto;
     display: flex;
     align-items: center;

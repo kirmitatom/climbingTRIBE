@@ -1291,7 +1291,7 @@ nav {
   color: var(--text-dark);
   transition: background-color 0.3s ease;
 }
-/*@media (max-width: 768px) { 
+@media (max-width: 768px) { 
   .main {
     flex-direction: column;
   }
@@ -1339,79 +1339,7 @@ nav {
 .schedule h2, .register-event h2 {
   font-family: var(--header-font);
   font-size: 30px;
-}*/
-@media (max-width: 768px) {
-  .main {
-    flex-direction: column; /* Stacks main content vertically */
-    align-items: center; /* Centers items horizontally */
-  }
-
-  .schedule {
-    margin-right: 0; /* Removes right margin for small screens */
-    width: 100%; /* Ensures full width */
-    text-align: center; /* Centers text content */
-  }
-
-  .calendar-grid {
-    grid-template-columns: repeat(4, 1fr); /* Adjusted grid for medium screens */
-    gap: 10px; /* Adds spacing between grid items */
-  }
-
-  .register-event {
-    margin-top: 30px;
-    width: 100%; /* Makes the event section take full width */
-    text-align: center; /* Centers text */
-  }
 }
-
-@media (max-width: 480px) {
-  .events-header {
-    flex-direction: column; /* Stacks header content vertically */
-    align-items: flex-start; /* Aligns header content to the left */
-    gap: 15px; /* Adds spacing between elements */
-  }
-
-  .events-header input {
-    width: 100%; /* Input takes the full width */
-    padding: 10px; /* Adds padding for better usability */
-    font-size: 16px; /* Increases font size for readability */
-  }
-
-  .calendar-grid {
-    grid-template-columns: repeat(2, 1fr); /* Adjust grid for very small screens */
-    gap: 8px; /* Smaller gap for compact layout */
-  }
-
-  .calendar-grid .header,
-  .calendar-grid .time-slot {
-    font-size: 12px; /* Adjusted font size for compact display */
-    text-align: center; /* Centers text in grid cells */
-  }
-
-  .registerButton {
-    padding: 12px 20px; /* Adds consistent padding for buttons */
-    font-size: 16px; /* Scales font size for smaller screens */
-    border-radius: 5px; /* Adds slight rounding for a modern look */
-    width: 100%; /* Makes button take full width */
-  }
-
-  .register-event {
-    margin-top: 30px;
-    justify-content: center;
-    text-align: center;
-    width: 100%;
-  }
-}
-
-.schedule h2,
-.register-event h2 {
-  font-family: var(--header-font);
-  font-size: 24px;
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-
 /*routes page css start*/
 .route-PG-section {
   padding: 40px 20px;

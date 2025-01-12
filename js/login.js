@@ -19,22 +19,6 @@ function checkCredentials(E, P) {
     return false;
 }
 
-/*function change() {
-    const email = document.getElementById("email").value;
-    const pass = document.getElementById("pass").value;
-    const text = document.getElementById("text");
-
-    if (checkCredentials(email, pass)) {
-        window.location.href = "home.html";
-        return false;
-    } else {
-        text.style.color = "red";
-        text.innerHTML = "Incorrect password or email";
-        return false;
-    }
-}*/
-
-
 function save() {
     const newemail = document.getElementById("newEmail").value;
     const newpass = document.getElementById("newPass").value;
@@ -63,7 +47,6 @@ function change() {
 
     if (checkCredentials(email, pass)) {
         localStorage.setItem("isLoggedIn", true);
-        localStorage.setItem("userEmail", email);
         window.location.href = "home.html";
         return false;
     } else {
@@ -75,6 +58,5 @@ function change() {
 
 function logout() {
     localStorage.removeItem("isLoggedIn");
-    localStorage.removeItem("userEmail");
     window.location.href = "home.html";
 }

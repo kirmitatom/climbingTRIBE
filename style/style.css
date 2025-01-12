@@ -18,8 +18,13 @@
 html {
   scroll-behavior: smooth;
 }
+body::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
 
 body {
+
   font-family: var(--body-font);
   background-color: var(--secondary-color);
 }
@@ -662,11 +667,7 @@ nav {
   .marketplace-images {
       max-width: 100%;
       padding-top: 30px;
-  }
-
-  .marketplace-images {
-      grid-template-columns: 1fr;
-  }
+  } 
 }
 /*markplace section css end*/
 /*footer*/
@@ -796,7 +797,6 @@ nav {
   padding: 20px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   margin-right: 20px;
-  transition: all 0.3s ease;
 }
 .sidebar:hover {
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
@@ -1427,6 +1427,7 @@ nav {
 /*marketplace page hero section*/
 .market-hero-sec {
   display: flex;
+  padding-top: 180px;
   justify-content: center;
   align-items: center;
   height: 100vh;
@@ -1523,14 +1524,6 @@ nav {
 .search-bar button:focus {
   outline: 2px solid var(--primary-color);
   outline-offset: 2px;
-}
-@media (max-width: 768px) {
-  .marketplace-page {
-    flex-direction: column;
-  }
-  .hero-content-section {
-    padding: 20px;
-  }
 }
 /* items section */
 .market-items-section {
@@ -1654,18 +1647,6 @@ nav {
   font-size: 1.2em;
   color: #333;
 }
-@media (max-width: 768px) {
-  .category-item, .deal-item {
-    flex: 1 1 calc(33.33% - 20px);
-    max-width: calc(33.33% - 20px);
-  }
-}
-@media (max-width: 480px) {
-  .category-item, .deal-item {
-    flex: 1 1 calc(50% - 20px);
-    max-width: calc(50% - 20px);
-  }
-}
 
 .sell-forum {
   padding: 40px 20px;
@@ -1739,20 +1720,6 @@ nav {
   background-color: var(--primary-color);
 }
 
-@media (max-width: 600px) {
-  .sell-forum {
-      padding: 20px;
-  }
-
-  .sell-item-form h2 {
-      font-size: 1.5rem;
-  }
-
-  .sell-item-form .publish-btn {
-      font-size: 1rem;
-  }
-}
-
 .brands {
   padding: 40px 20px;
   text-align: center;
@@ -1797,25 +1764,77 @@ nav {
   display: block;
 }
 
-@media (max-width: 1024px) {
-  .brand-card {
-    flex: 0 0 25%;
-  }
+.brands-container::-webkit-scrollbar {
+  width: 0;
+  height: 0;
 }
 
 @media (max-width: 768px) {
-  .brand-card {
-    flex: 0 0 40%;
+  .marketplace-page {
+    flex-direction: column;
+    border-radius: 0;
+    padding: 10px;
+  }
+  .hero-content-section {
+    padding: 20px;
+  }
+  .category-item, .deal {
+    flex: 1 1 calc(50% - 20px);
+    max-width: calc(50% - 20px);
   }
 }
 
 @media (max-width: 480px) {
-  .brand-card {
-    flex: 0 0 60%;
+  .category-item, .deal, .brand-card {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+
+  .marketplace-title {
+    font-size: 24px;
+  }
+
+  .marketplace-description {
+    font-size: 14px;
+  }
+
+  .sell-item-form h2 {
+    font-size: 1.8rem;
+  }
+
+  .sell-item-form .publish-btn {
+    font-size: 1rem;
+  }
+
+  .market-items-display h2 {
+    font-size: 2rem;
+  }
+
+  .navigation button {
+    width: 35px;
+    height: 35px;
+  }
+
+  .sell-forum {
+    padding: 20px;
   }
 }
 
-.brands-container::-webkit-scrollbar {
-  width: 0;
-  height: 0;
+@media (max-width: 360px) {
+  .search-bar input {
+    font-size: 12px;
+  }
+  .search-bar button {
+    font-size: 12px;
+    padding: 5px 10px;
+  }
+
+  .deal .add-to-cart {
+    width: 30px;
+    height: 30px;
+  }
+
+  .deal .badge {
+    font-size: 0.7em;
+  }
 }

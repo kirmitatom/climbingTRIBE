@@ -184,7 +184,7 @@
                       <a href="Marketplace">buy & sell Gear</a>
                   </div>
               </div>
-              <button class="signupbtn">SIGN UP</button>
+              <button id="footer-signup" class="signupbtn">SIGN UP</button>
           </div>
           <div class="social-icons">
               <a href="#"><i class="fab fa-twitter"></i></a>
@@ -198,11 +198,13 @@
           document.addEventListener("DOMContentLoaded", () => {
             const isLoggedIn = localStorage.getItem("isLoggedIn");
             const signUpBtn = document.getElementById("signUpBtn");
+            const footerSignUp = document.getElementById("footer-signup");
             const loginBtn = document.getElementById("loginBtn");
             const loginLink = document.getElementById("loginLink");
 
             if (isLoggedIn) {
                 signUpBtn.style.display = "none";
+                footerSignUp.style.display = "none";
                 loginBtn.textContent = "Logout";
                 loginLink.href = "#";
                 loginBtn.onclick = () => {

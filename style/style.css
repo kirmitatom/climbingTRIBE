@@ -43,7 +43,6 @@ nav {
   position: fixed;
   isolation: isolate;
   width: 100vw;
-  overflow-x: hidden;
   z-index: 9;
 }
 

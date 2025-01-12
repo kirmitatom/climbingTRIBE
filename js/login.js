@@ -19,7 +19,7 @@ function checkCredentials(E, P) {
     return false;
 }
 
-function change() {
+/*function change() {
     const email = document.getElementById("email").value;
     const pass = document.getElementById("pass").value;
     const text = document.getElementById("text");
@@ -32,7 +32,8 @@ function change() {
         text.innerHTML = "Incorrect password or email";
         return false;
     }
-}
+}*/
+
 
 function save() {
     const newemail = document.getElementById("newEmail").value;
@@ -55,32 +56,25 @@ function save() {
 }
 
 
-function checkLoginStatus() {
-    const isLoggedIn = localStorage.getItem("loggedIn");
+function change() {
+    const email = document.getElementById("email").value;
+    const pass = document.getElementById("pass").value;
+    const text = document.getElementById("text");
 
-    const signUpBtn = document.getElementById("signUpBtn");
-    const loginBtn = document.getElementById("loginBtn");
-
-    if (isLoggedIn === "true") {
-        // Hide Sign Up button and change Login button text to Logout
-        signUpBtn.style.display = "none";
-        loginBtn.innerText = "Logout";
-        loginBtn.addEventListener("click", logout); // Attach logout event when logged in
+    if (checkCredentials(email, pass)) {
+        localStorage.setItem("isLoggedIn", true);
+        localStorage.setItem("userEmail", email);
+        window.location.href = "home.html";
+        return false;
     } else {
-        // Show Sign Up button and change Login button text back to Login
-        signUpBtn.style.display = "inline-block";
-        loginBtn.innerText = "Login";
-        loginBtn.addEventListener("click", function() {
-            window.location.href = "login.html"; // Redirect to login page when clicked
-        });
+        text.style.color = "red";
+        text.innerHTML = "Incorrect password or email";
+        return false;
     }
 }
 
 function logout() {
-    localStorage.removeItem("loggedIn"); 
-    window.location.href = "login.html"; // Redirect to login page
+    localStorage.removeItem("isLoggedIn");
+    localStorage.removeItem("userEmail");
+    window.location.href = "home.html";
 }
-
-document.addEventListener("DOMContentLoaded", function() {
-    checkLoginStatus(); // Check the login status when the page loads
-});

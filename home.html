@@ -30,8 +30,12 @@
               <li><a class="scrolllink" href="#Marketplace">Marketplace</a></li>
             </ul>
             <div class="nav__btns scrollleft">
-              <a href="signup.html"><button id="signUpBtn" class="btn sign__up1">Sign Up</button></a>
-              <a href="login.html"><button id="loginBtn" class="btn sign__in1">logIn</button></a>
+                <a id="signUpLink" href="signup.html">
+                    <button id="signUpBtn" class="btn sign__up1">Sign Up</button>
+                </a>
+                <a id="loginLink" href="login.html">
+                    <button id="loginBtn" class="btn sign__in1">Log In</button>
+                </a>
             </div>
           </nav>
           <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
@@ -191,6 +195,23 @@
         </section>
         <script src="https://unpkg.com/scrollreveal"></script>
         <script>
+          document.addEventListener("DOMContentLoaded", () => {
+            const isLoggedIn = localStorage.getItem("isLoggedIn");
+            const signUpBtn = document.getElementById("signUpBtn");
+            const loginBtn = document.getElementById("loginBtn");
+            const loginLink = document.getElementById("loginLink");
+
+            if (isLoggedIn) {
+                signUpBtn.style.display = "none";
+                loginBtn.textContent = "Logout";
+                loginLink.href = "#";
+                loginBtn.onclick = () => {
+                    localStorage.removeItem("isLoggedIn");
+                    localStorage.removeItem("userEmail");
+                    window.location.href = "login.html";
+                };
+            }
+          });
         ScrollReveal().reveal('.feature-item', {
           opacity: 0,
           delay: 200,

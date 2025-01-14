@@ -1336,6 +1336,9 @@ nav {
     justify-content: center;
   }
 }
+.event {
+  cursor: pointer;
+}
 .schedule h2, .register-event h2 {
   font-family: var(--header-font);
   font-size: 30px;

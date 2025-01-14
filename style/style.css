@@ -1845,3 +1845,17 @@ nav {
     font-size: 0.7em;
   }
 }
+@media (max-width: 480px) {
+  .schedule h2, .register-event h2 {
+    font-size: 24px;
+  }
+
+  .calendar-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .registerButton {
+    font-size: 16px;
+    padding: 10px;
+  }
+}

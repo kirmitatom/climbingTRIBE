@@ -1,22 +1,24 @@
-const db = [
-    {"useremail": "test@gmail.com", "password": "test"},
-    {"useremail": "hussein@gmail.com", "password": "sui"}
-];
+function getDB() {
+    const db = localStorage.getItem("userDB");
+    return db ? JSON.parse(db) : [];
+}
+
+function setDB(db) {
+    localStorage.setItem("userDB", JSON.stringify(db));
+}
 
 function addUser(E, P) {
+    const db = getDB();
     db.push({"useremail": E, "password": P});
-    document.getElementById("newuser").innerHTML = "You are now a member. Please go log in.";
+    setDB(db);
+    document.getElementById("newuser").innerHTML = "You are now a member.";
     document.getElementById("newuser").style.color = "black";
     return false;
 }
 
 function checkCredentials(E, P) {
-    for (const user of db) {
-        if (user.useremail === E && user.password === P) {
-            return true;
-        }
-    }
-    return false;
+    const db = getDB();
+    return db.some(user => user.useremail === E && user.password === P);
 }
 
 function save() {
@@ -38,7 +40,6 @@ function save() {
         return false;
     }
 }
-
 
 function change() {
     const email = document.getElementById("email").value;
